@@ -1,0 +1,147 @@
+body.views-mode-map #branding {
+  position:fixed;
+  top:0px;
+  right:0px;
+  left:0px;
+  }
+
+body.views-mode-map #page-header{
+  position:fixed;
+  left:25%;
+  top:60px;
+  right:0px;
+  z-index:500;
+  }
+
+body.views-mode-map #main {
+  position:fixed;
+  top:110px;
+  right:0px;
+  bottom:0px;
+  left:25%;
+  }
+
+body.views-mode-map div.openlayers-views-map,
+body.views-mode-map div.openlayers-views-map div.openlayers-map {
+  position:absolute;
+  top:0px;
+  right:0px;
+  left:0px;
+  bottom:0px;
+
+  background:#ccc;
+  
+  width:auto !important;
+  height:auto !important;
+  }
+
+div.openlayers-map circle { cursor:pointer; }
+
+div.olControlScaleLine { opacity:.65; }
+
+div.olControlScaleLineBottom,
+div.olControlScaleLineTop {
+  font-weight:bold;
+  line-height:20px;
+
+  color:#000;
+  border-color:#000;
+  border-width:0px 2px 2px;
+  }
+
+div.olControlScaleLineBottom { border-width:2px 2px 0px; }
+
+/**
+ * Tooltips
+ */
+div.openlayers-map div.olPopupContent { overflow:visible !important; }
+
+div.openlayers-map div.popup-name {
+  font-size:15px;
+  font-weight:bold;
+  color:#fff;
+  text-shadow:#000 0px 1px 5px;
+  }
+
+/**
+ * Popup box
+ */
+div.openlayers-map div.openlayers-popupbox {
+  position:absolute;
+  z-index:2000;
+  right:20px;
+  top:20px;
+  width:35%;
+
+  overflow:hidden;
+
+  color:#ccc;
+  background:url(../images/help.png);
+  padding:5px;
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  }
+
+div.openlayers-map div.openlayers-popupbox a { color:#fff; }
+
+div.openlayers-map div.openlayers-popupbox a.popup-close {
+  float:right;
+  padding:10px;
+  }
+
+div.openlayers-map div.popup-pager {
+  background:url(../images/help.png);
+  padding:10px 20px;
+  height:20px;
+  }
+
+div.openlayers-map ul.popup-links { float:right; }
+
+  div.openlayers-map ul.popup-links li { padding-left:5px; }
+
+  div.openlayers-map ul.popup-links a {
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    padding:0px 10px;
+    background:#444;
+    }
+
+    div.openlayers-map ul.popup-links a.disabled { color:#999; }
+
+div.openlayers-map h2.popup-title {
+  font-size:15px;
+  font-weight:bold;
+  padding:10px 20px;
+  background:url(../images/help.png);
+  }
+
+div.openlayers-map div.popup-content {
+  overflow:hidden;
+  padding:20px;
+  }
+
+div.openlayers-map h2.point-title {
+  font-size:18px;
+  margin:0px 0px 20px;
+  }
+
+div.openlayers-map div.point-content {
+  max-height:120px;
+  overflow:hidden;
+  }
+  
+div.olControlPermalink {
+  position:absolute;
+  bottom:5px;
+  left:5px;
+  font-size:10px;
+}
+
+div.olControlAttribution {
+  right:25px;
+  color:#666;
+}
+
+body.views-mode-map div#openlayers-map-auto-id-0_OpenLayers_ViewPort {
+  position: absolute !important;
+}

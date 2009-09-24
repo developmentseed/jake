@@ -1,0 +1,24 @@
+name = "Jake"
+description = "Theme for MN3. Jake is a little dog."
+version = "6.x-1.0"
+core = "6.x"
+engine = "phptemplate"
+base theme = "tao"
+
+project = "jake"
+
+scripts[] = "js/theme.js"
+
+stylesheets[screen][] = "style.css"
+stylesheets[screen][] = "css/forms.css"
+stylesheets[screen][] = "css/openlayers.css"
+stylesheets[print][] = "print.css"
+
+regions[palette] = "Palette"
+regions[page_tools] = "Page tools"
+regions[page_title] = "Page title"
+regions[left] = "Left sidebar"
+regions[right] = "Right sidebar"
+regions[content] = "Content"
+
+features[0] = ""
