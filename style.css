@@ -176,7 +176,7 @@ h1.site-name { float:left; }
     }
 
 /**
- * Help ===============================================================
+ * Help, MN share =====================================================
  */
 div.help-link {
   padding:10px 0px;
@@ -197,14 +197,20 @@ div.help-link a {
   height:30px;
   }
 
-#help {
+#help,
+div.mn-share-popup {
   font-size:18px;
   line-height:30px;
   font-weight:300;
 
   color:#fff;
   background:url(images/help.png);
+  }
 
+  #help a,
+  div.mn-share-popup a { color:#fff; }
+
+#help {
   display:none;
 
   position:fixed;
@@ -214,8 +220,6 @@ div.help-link a {
   left:0px;
   z-index:1000;
   }
-
-  #help a { color:#fff; }
 
 #help h2.help-title {
   padding:20px 20px 0px;
@@ -265,6 +269,36 @@ body.help #branding a.help-link {
   }
 
 body.help #help { display:block; }
+
+/* MN share */
+div.mn-share-popup ul.links { margin:10px 0px 0px; }
+
+div.mn-share-popup ul.links a {
+  -moz-border-radius:15px;
+  -webkit-border-radius:15px;
+
+  background:#222;
+  padding:0px 15px;
+  margin-right:10px;
+  }
+
+div.mn-share-popup span.close {
+  cursor:pointer;
+  float:right;
+
+  padding:0px;
+  width:20px;
+  height:20px;
+  display:block;
+
+  overflow:hidden;
+  text-indent:-999px;
+  top:20px;
+  right:20px;
+
+  background:url(images/sprite.png) -40px 0px no-repeat;
+  }
+
 
 /**
  * Footer =============================================================
@@ -438,6 +472,8 @@ div.feeditem {
     font-weight:bold;
     }
 
+div.feeditem-content { overflow:hidden; }
+
 div.feeditem-links {
   position:absolute;
   width:30px;
@@ -468,6 +504,7 @@ div.feeditem-links {
 
     div.feeditem-links a.data-node-add { background:url(images/sprite.png) -370px 0px no-repeat; }
     div.feeditem-links a.data-node-remove { display:none; background:url(images/sprite.png) -370px -30px no-repeat; }
+    div.feeditem-links a.mn-share { background:url(images/sprite.png) -370px -270px no-repeat; }
 
     div.feeditem-links a:hover {
       background-color:#444;
