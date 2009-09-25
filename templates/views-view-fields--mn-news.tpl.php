@@ -18,8 +18,8 @@
   </div>
 
   <div class='feeditem-links clear-block'>
-    <?php print jake_views_render_field($fields['data_node_add_remove']) ?>
     <?php print jake_views_render_field($fields['mn_share_link']) ?>
+    <?php print jake_views_render_field($fields['data_node_add_remove']) ?>
   </div>
 
 </div>
