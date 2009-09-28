@@ -1029,3 +1029,22 @@ div.flot-caption {
   padding:0px 10px;
   height:20px;
   }
+
+/**
+ * 404/403 ============================================================
+ */
+div.access-denied,
+div.not-found {
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+
+  font-size:24px;
+  line-height:30px;
+  font-weight:300;
+  letter-spacing:-1px;
+  text-align:center;
+
+  background:#f8f8f8;
+  border:5px solid #fff;
+  padding:20px 20px;
+  }

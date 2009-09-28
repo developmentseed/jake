@@ -72,6 +72,8 @@ div.feeditem-labels {
   width:70%;
   }
 
+  div.feeditem-content { overflow:hidden; }
+
 h2.feeditem-title {
   font-size:14pt;
   padding-bottom:15pt;

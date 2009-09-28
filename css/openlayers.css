@@ -132,14 +132,15 @@ div.openlayers-map div.point-content {
   
 div.olControlPermalink {
   position:absolute;
-  bottom:5px;
-  left:5px;
+  top:5px;
+  right:5px;
   font-size:10px;
 }
 
 div.olControlAttribution {
-  right:25px;
-  color:#666;
+  bottom:5px;
+  left:5px;
+  color:#444;
 }
 
 body.views-mode-map div#openlayers-map-auto-id-0_OpenLayers_ViewPort {
