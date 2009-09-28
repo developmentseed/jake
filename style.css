@@ -94,6 +94,18 @@ body.views-mode-map #main div.main-wrapper { padding:0px; }
   padding:15px;
   }
 
+#growl div.messages li.message-item {
+  border-bottom:1px solid #333;
+  padding:0px 0px 9px;
+  margin:0px 0px 10px;
+  }
+
+#growl div.messages li.message-item:last-child {
+  border:0px;
+  padding:0px;
+  margin:0px;
+  }
+
 /**
  * Branding & Navigation ==============================================
  */
@@ -1040,3 +1052,14 @@ div.container-inline div.form-item {
   }
 
   div.container-inline div.form-item { float:left; }
+
+div.admin-required,
+div.admin-dependencies { font-size:11px; }
+
+span.admin-disabled { color: #800; }
+span.admin-enabled { color: #080; }
+span.admin-missing { color: #f00; }
+
+td.module { font-weight:bold; }
+td.permission { padding-left:20px; }
+
