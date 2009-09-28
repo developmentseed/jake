@@ -10,6 +10,7 @@ project = "jake"
 scripts[] = "js/theme.js"
 
 stylesheets[screen][] = "style.css"
+stylesheets[screen][] = "css/admin.css"
 stylesheets[screen][] = "css/forms.css"
 stylesheets[screen][] = "css/openlayers.css"
 stylesheets[print][] = "print.css"

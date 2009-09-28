@@ -104,6 +104,14 @@ h2.fieldset-title {
   h2.fieldset-title,
   h2.fieldset-title a { color:#666; }
 
+div.collapsible h2.fieldset-title a {
+  background:url(../images/sprite.png) -380px -380px no-repeat;
+  display:block;
+  padding-left:25px;
+  }
+
+  div.collapsed h2.fieldset-title a { background-position:-380px -360px; }
+
 /**
  * TABLES =============================================================
  */

@@ -211,6 +211,7 @@ div.openlayers-views-map div.openlayers-map {
   height:7in !important;
   }
 
+div.openlayers-map div.olControlLayerSwitcherPlus,
 div.openlayers-map div.openlayers-popupbox,
 div.openlayers-map div.olControlPanZoomBar { display:none !important; }
 

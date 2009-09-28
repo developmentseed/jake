@@ -667,6 +667,7 @@ div.context-links a:hover { background:#fff; }
  */
 div.sidebar { padding:20px 20px 20px 0px; }
 
+div.admin-panel,
 #palette div.block,
 div.sidebar div.block {
   -moz-border-radius:5px;
@@ -689,6 +690,7 @@ div.sidebar div.block {
     background:url(images/help.png);
     }
 
+div.admin-panel h3,
 #palette h2.block-title,
 div.sidebar h2.block-title {
   font-weight:bold;
@@ -1027,39 +1029,3 @@ div.flot-caption {
   padding:0px 10px;
   height:20px;
   }
-
-/**
- * Administrative UI ==================================================
- */
-#user-admin-filter { display:none; }
-
-div.container-inline {
-  padding:10px 10px 9px;
-  border-bottom:1px solid #eee;
-  background:#e8e8e8;
-  }
-
-div.container-inline select { width:auto; }
-
-div.container-inline h2.fieldset-title,
-div.container-inline div.fieldset-content,
-div.container-inline div.fieldset,
-div.container-inline div.form-item {
-  display:block;
-  background:transparent;
-  border:0px;
-  padding:0px;
-  }
-
-  div.container-inline div.form-item { float:left; }
-
-div.admin-required,
-div.admin-dependencies { font-size:11px; }
-
-span.admin-disabled { color: #800; }
-span.admin-enabled { color: #080; }
-span.admin-missing { color: #f00; }
-
-td.module { font-weight:bold; }
-td.permission { padding-left:20px; }
-
