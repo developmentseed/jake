@@ -603,10 +603,10 @@ div.navbar div.item-list li a.active {
   }
 
 /* Menu trees */
-div.navbar ul.menu ul li a { padding-left: 20px; }
-div.navbar ul.menu ul ul li a { padding-left: 40px; }
+div.navbar ul.menu ul li a { padding-left: 30px; }
+div.navbar ul.menu ul ul li a { padding-left: 50px; }
 div.navbar ul.menu ul ul ul li a { padding-left: 60px; }
-div.navbar ul.menu ul ul ul ul li a { padding-left: 80px; }
+div.navbar ul.menu ul ul ul ul li a { padding-left: 70px; }
 
 div.navbar div.item-list li { position:relative; }
 
