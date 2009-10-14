@@ -1,6 +1,5 @@
 name = "Jake"
 description = "Theme for MN3. Jake is a little dog."
-version = "6.x-1.0"
 core = "6.x"
 engine = "phptemplate"
 base theme = "tao"
