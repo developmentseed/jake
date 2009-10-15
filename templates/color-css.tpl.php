@@ -35,6 +35,7 @@ div.sidebar div.view-mn-search-saved div.views-field-title a,
 
 span.data-node-label,
 #canvas div.utility-block {
+  border-color:<?php print $foreground_reverse ? $foreground_b25 : $foreground ?>;
   background-color:<?php print $foreground_reverse ? $foreground_b10 : $foreground_w10 ?>;
   }
 
