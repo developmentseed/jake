@@ -5,7 +5,7 @@ body.views-mode-map #branding {
   left:0px;
   }
 
-body.views-mode-map #page-header{
+body.views-mode-map #page-header {
   position:fixed;
   left:25%;
   top:60px;
@@ -20,6 +20,10 @@ body.views-mode-map #main {
   bottom:0px;
   left:25%;
   }
+
+  /* Add cases when additional elements are stacked */
+  body.views-mode-map.with-search #main { top:160px; }
+  body.views-mode-map.with-tabs #main { top:140px; }
 
 body.views-mode-map div.openlayers-views-map,
 body.views-mode-map div.openlayers-views-map div.openlayers-map {

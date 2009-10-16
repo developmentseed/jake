@@ -37,6 +37,18 @@ function jake_preprocess_page(&$vars) {
 
   // Site name
   $vars['site_name'] = theme('site_name');
+
+  // Determine stack height for fullscreen views.
+  $class = array();
+  if ($stackclass = context_get('theme', 'stackclass')) {
+    $class[] = $stackclass;
+  }
+  if (!empty($vars['tabs'])) {
+    $class[] = 'tabs';
+  }
+  if (!empty($class)) {
+    $vars['attr']['class'] .= ' with-'. implode('-', $class);
+  }
 }
 
 /**
@@ -50,8 +62,12 @@ function jake_preprocess_block(&$vars) {
       'stored_views-save',
     ),
   );
+  $bid = "{$vars['block']->module}-{$vars['block']->delta}";
+  if ($bid == 'stored_views-save') {
+    context_set('theme', 'stackclass', 'search');
+  }
   foreach ($classgroups as $class => $blocks) {
-    if (in_array("{$vars['block']->module}-{$vars['block']->delta}", $blocks)) {
+    if (in_array($bid, $blocks)) {
       $vars['attr']['class'] .= " {$class}";
     }
   }
