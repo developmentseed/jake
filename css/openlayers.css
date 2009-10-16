@@ -120,6 +120,8 @@ div.openlayers-map div.popup-content {
   padding:20px;
   }
 
+  div.openlayers-map div.popup-content img { display:none; }
+
 div.openlayers-map h2.point-title {
   font-size:18px;
   margin:0px 0px 20px;
