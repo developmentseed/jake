@@ -372,7 +372,7 @@ div.mn-share-popup span.close {
   background-position:30px 30px;
   }
 
-  #palette div.palette-links ul.links li.data_node-data_table_feedapi_feed a { background-position:-370px 0px; }
+  #palette div.palette-links ul.links li.data_node-feeds_data_syndication a { background-position:-370px 0px; }
   #palette div.palette-links ul.links li.mn_core-user a,
   #palette div.palette-links ul.links li.user-0 a { background-position:-370px -240px; }
 
