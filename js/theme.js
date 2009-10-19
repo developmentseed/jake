@@ -51,7 +51,7 @@ Drupal.behaviors.jake = function (context) {
   /**
    * Help display toggle.
    */
-  $('a.help-link:not(.processed)').each(function() {
+  $('a.help-link:not(.processed), #help div.help-close a:not(.processed)').each(function() {
     $(this).addClass('processed');
     $(this).click(function() {
       $('body').toggleClass('help');

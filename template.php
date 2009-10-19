@@ -7,7 +7,7 @@ function jake_theme($existing, $type, $theme, $path) {
   return array(
     'blocks_palette' => array(),
     'color_css' => array(
-      'arguments' => array('background' => '', 'foreground' => ''),
+      'arguments' => array('background' => '', 'header' => '', 'foreground' => '', 'wallpaper_position' => ''),
       'template' => 'color-css',
       'path' => drupal_get_path('theme', 'jake') .'/templates',
     ),
@@ -33,7 +33,7 @@ function jake_preprocess_page(&$vars) {
 
   // Custom coloring and styles
   $settings = theme_get_settings('jake');
-  $vars['styles'] .= theme('color_css', $settings['background_color'], $settings['foreground_color']);
+  $vars['styles'] .= theme('color_css', $settings['background_color'], $settings['header_color'], $settings['foreground_color'], $settings['wallpaper_position']);
 
   // Site name
   $vars['site_name'] = theme('site_name');
@@ -226,9 +226,12 @@ function jake_status_messages($display = NULL) {
  * Crunch out some color variations for our CSS.
  */
 function jake_preprocess_color_css(&$vars) {
+  $vars['wallpaper_position'] = !empty($vars['wallpaper_position']) ? $vars['wallpaper_position'] : 'bottom right';
+
   if (module_exists('color')) {
     $defaults = array(
-      'background' => '#222222',
+      'background' => '#e0e0e0',
+      'header' => '#222222',
       'foreground' => '#aaccee'
     );
     foreach ($defaults as $key => $default) {

@@ -1,28 +1,33 @@
-<?php if ($background && $foreground): ?>
+<?php if ($background && $header && $foreground && $wallpaper_position): ?>
 
 <style type='text/css'>
+body {
+  background-color:<?php print $background ?>;
+  background-position:<?php print $wallpaper_position ?>;
+  }
+
 /**
  * Background color ===================================================
  */
 #branding {
-  background-color:<?php print $background ?>;
-  border-color:<?php print $background_b10; ?>
+  background-color:<?php print $header ?>;
+  border-color:<?php print $header_b10; ?>
   }
 
-#branding a { color:<?php print $background_text ?>; }
+#branding a { color:<?php print $header_text ?>; }
 
 #branding div.help-link a,
 #branding div.admin-link a,
 #branding ul.links a:hover {
-  background-color:<?php print $background_reverse ? $background_b25 : $background_w25 ?>;
-  color:<?php print $background_text ?>;
+  background-color:<?php print $header_reverse ? $header_b25 : $header_w25 ?>;
+  color:<?php print $header_text ?>;
   }
 
 #branding ul.links li.active a,
 #branding ul.links li a.active,
 body.help #branding a.help-link {
-  background-color:<?php print $background_text ?>;
-  color:<?php print $background_reverse ? $background_b25 : $background_w25 ?>;
+  background-color:<?php print $header_text ?>;
+  color:<?php print $header_reverse ? $header_b25 : $header_w25 ?>;
   }
 
 /**

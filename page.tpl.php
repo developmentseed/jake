@@ -63,6 +63,7 @@
 <?php if ($help): ?>
   <div id='help'>
     <div class='help-wrapper clear-block'>
+      <div class='help-close'><?php print l(t('Hide this'), $_GET['q'], array('fragment' => 'close')) ?></div>
       <h2 class='help-title'><?php print t('Need help?') ?></h2>
       <div class='help-content'><?php print $help; ?></div>
     </div>

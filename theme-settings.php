@@ -13,8 +13,21 @@ function jake_settings($settings) {
 
   $form = array();
 
-  $logo_types = array('logo' => t('Logo'), 'printlogo' => t('Print'));
-  foreach ($logo_types as $key => $label) {
+  $image_types = array(
+    'logo' => array(
+      '#title' => t('Site logo'),
+      '#description' => t('This image will replace the site title shown in the header.'),
+    ),
+    'printlogo' => array(
+      '#title' => t('Print logo'),
+      '#description' => t('This image will be used in the header of any print-friendly pages.'),
+    ),
+    'wallpaper' => array(
+      '#title' => t('Site wallpaper'),
+      '#description' => t('This image will be displayed as a site background.'),
+    ),
+  );
+  foreach ($image_types as $key => $base) {
     // Check for a new uploaded logo, and use that instead.
     if ($file = file_save_upload("{$key}_file", array('file_validate_is_image' => array()))) {
       $parts = pathinfo($file->filename);
@@ -29,20 +42,16 @@ function jake_settings($settings) {
     }
     $form["{$key}_file"] = array(
       '#type' => 'file',
-      '#title' => t('!type image', array('!type' => $label)),
       '#maxlength' => 40,
-      '#description' => $key == 'logo' ?
-        t('This image will replace the site title shown in the header.') :
-        t('This image will be used in the header of any print-friendly pages.'),
-    );
+    ) + $base;
     if (!empty($settings["{$key}_path"])) {
       $form["{$key}_wrapper"] = array(
         '#type' => 'item',
         '#tree' => FALSE,
         '#description' => !empty($settings["{$key}_path"]) ? theme('image', $settings["{$key}_path"], NULL, NULL, array('width' => '200'), FALSE) : '',
-      );
+      ) + $base;
       $form["{$key}_wrapper"]["{$key}_delete"] = array(
-        '#value' => t('Delete the current logo'),
+        '#value' => t('Delete the current image'),
         '#type' => 'submit',
         '#submit' => array("jake_settings_delete_{$key}_submit"),
       );
@@ -53,27 +62,60 @@ function jake_settings($settings) {
     );
   }
 
-  // Determine default bg color
-  if (!empty($settings['background_color'])) {
-    $default_bgcolor = $settings['background_color'];
+  $form['wallpaper_position'] = array(
+    '#title' => t('Wallpaper position'),
+    '#type' => 'select',
+    '#options' => array(
+      t('Top') => array(
+        'top center' => t('Top center'),
+        'top right' => t('Top right'),
+        'top left' => t('Top left'),
+      ),
+      t('Bottom') => array(
+        'bottom center' => t('Bottom center'),
+        'bottom right' => t('Bottom right'),
+        'bottom left' => t('Bottom left'),
+      ),
+    ),
+    '#default_value' => !empty($settings['wallpaper_position']) ? $settings['wallpaper_position'] : 'bottom right',
+    '#description' => t('Select the wallpaper image position.'),
+  );
+
+  // Autodetect colors from uploaded images.
+  $autodetect = array(
+    'background_color' => 'logo_path',
+    'header_color' => 'wallpaper_path',
+  );
+  foreach ($autodetect as $key => $imagepath) {
+    if (empty($settings[$key])) {
+      $autocolor = !empty($settings[$imagepath]) ? _jake_design_image_autocolor($settings[$imagepath]) : '';
+      if (!empty($autocolor)) {
+        $settings[$key] = $autocolor;
+        variable_set('theme_jake_settings', $settings);
+      }
+    }
   }
-  else {
-    $autocolor = !empty($settings['logo_path']) ? _jake_design_image_autocolor($settings['logo_path']) : '';
-    $default_bgcolor = !empty($autocolor) ? $autocolor : '#222';
-    $settings['background_color'] = $default_bgcolor;
-    variable_set('theme_jake_settings', $settings);
-  }
+
   $form['background_color'] = array(
-    '#title' => t('background color'),
+    '#title' => t('Background color'),
     '#type' => 'textfield',
     '#size' => '7',
     '#maxlength' => '7',
-    '#default_value' => $default_bgcolor,
-    '#description' => t('Leave blank to attempt to autodetect color from uploaded logo.') . '<div id="colorpicker-background" class="colorpicker"></div>',
+    '#default_value' => !empty($settings['background_color']) ? $settings['background_color'] : '#e8e8e8',
+    '#description' => t('Leave blank to attempt to autodetect color from uploaded wallpaper.') . '<div id="colorpicker-background" class="colorpicker"></div>',
+    '#attributes' => array('class' => 'theme-colorpicker'),
+  );
+  $form['header_color'] = array(
+    '#title' => t('Header color'),
+    '#type' => 'textfield',
+    '#size' => '7',
+    '#maxlength' => '7',
+    '#default_value' => !empty($settings['header_color']) ? $settings['header_color'] : '#222',
+    '#description' => t('Leave blank to attempt to autodetect color from uploaded logo.') . '<div id="colorpicker-header" class="colorpicker"></div>',
     '#attributes' => array('class' => 'theme-colorpicker'),
   );
   $form['foreground_color'] = array(
-    '#title' => t('foreground color'),
+    '#title' => t('Foreground color'),
     '#type' => 'textfield',
     '#size' => '7',
     '#maxlength' => '7',

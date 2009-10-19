@@ -1,6 +1,6 @@
 body {
   color:#666;
-  background:#e8e8e8 url(images/canvas.png) repeat-x fixed;
+  background:#e0e0e0 url(images/background.gif) 100% 100% no-repeat fixed;
   }
 
 a {
@@ -232,6 +232,23 @@ div.mn-share-popup {
   left:0px;
   z-index:1000;
   }
+
+#help div.help-close {
+  float:right;
+  padding:20px 20px 0px 0px;
+  }
+
+  #help div.help-close a {
+    background:#222;
+    font-size:13px;
+    display:block;
+    padding:0px 10px;
+
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    }
+
+    #help div.help-close a:hover { background:#eee; color:#222; }
 
 #help h2.help-title {
   padding:20px 20px 0px;
@@ -785,20 +802,24 @@ div.main-wrapper div.view-empty {
   -moz-border-radius:5px;
   -webkit-border-radius:5px;
 
+  font-size:15px;
   background:#fff;
   padding:20px;
   }
 
-div.navbar div.view-empty {
-  padding:20px;
-  font-size:13px;
-  }
-
+div.navbar div.view-empty,
 div.sidebar div.view-empty {
+  text-align:center;
+  color:#999;
   font-size:13px;
-  background:#fff;
-  padding:10px;
   }
+
+  div.navbar div.view-empty { padding:20px; }
+
+  div.sidebar div.view-empty {
+    padding:10px;
+    background:#fff;
+    }
 
 /**
  * Formatting for hilighted topics.
