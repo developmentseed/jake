@@ -1,9 +1,14 @@
-<?php if ($background && $header && $foreground && $wallpaper_position): ?>
+<?php if ($background && $header && $foreground): ?>
 
 <style type='text/css'>
 body {
   background-color:<?php print $background ?>;
-  background-position:<?php print $wallpaper_position ?>;
+  <?php if ($wallpaper_path): ?>
+    background-image: url("<?php print $wallpaper_path?>");
+  <?php endif; ?>
+  <?php if ($wallpaper_position): ?>
+    background-position:<?php print $wallpaper_position ?>;
+  <?php endif; ?>
   }
 
 /**

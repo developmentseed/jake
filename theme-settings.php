@@ -31,7 +31,7 @@ function jake_settings($settings) {
     // Check for a new uploaded logo, and use that instead.
     if ($file = file_save_upload("{$key}_file", array('file_validate_is_image' => array()))) {
       $parts = pathinfo($file->filename);
-      $filename = "theme_{$key}_{$parts['extension']}";
+      $filename = "theme_{$key}.{$parts['extension']}";
       if (file_copy($file, $filename, FILE_EXISTS_REPLACE)) {
         $settings["{$key}_path"] = $file->filepath;
         // Flush any imagecache variants.
@@ -40,21 +40,27 @@ function jake_settings($settings) {
         }
       }
     }
+    if (empty($settings["{$key}_path"])) {
     $form["{$key}_file"] = array(
       '#type' => 'file',
       '#maxlength' => 40,
     ) + $base;
-    if (!empty($settings["{$key}_path"])) {
+    }
+    else {
+      $preview = !empty($settings["{$key}_path"]) ? theme('image', $settings["{$key}_path"], NULL, NULL, array('width' => '200'), FALSE) : '';
       $form["{$key}_wrapper"] = array(
         '#type' => 'item',
         '#tree' => FALSE,
-        '#description' => !empty($settings["{$key}_path"]) ? theme('image', $settings["{$key}_path"], NULL, NULL, array('width' => '200'), FALSE) : '',
+        'preview' => array(
+          '#type' => 'markup',
+          '#value' => "<div class='image-preview'>{$preview}</div>",
+        ),
+        "{$key}_delete" => array(
+          '#value' => t('Delete the current image'),
+          '#type' => 'submit',
+          '#submit' => array("jake_settings_delete_{$key}_submit"),
+        ),
       ) + $base;
-      $form["{$key}_wrapper"]["{$key}_delete"] = array(
-        '#value' => t('Delete the current image'),
-        '#type' => 'submit',
-        '#submit' => array("jake_settings_delete_{$key}_submit"),
-      );
     }
     $form["{$key}_path"] = array(
       '#type' => 'value',
@@ -127,29 +133,37 @@ function jake_settings($settings) {
 }
 
 /**
- * Logo deletion submit handler.
+ * Helper to image delete submit handlers.
  */
-function jake_settings_delete_logo_submit(&$form, &$form_state) {
-  if (file_delete($form_state['values']['logo_path'])) {
+function _jake_settings_delete_image($key, &$form_state) {
+  if (file_delete($form_state['values'][$key])) {
     $settings = variable_get('theme_jake_settings', array());
-    if (isset($settings['logo_path'])) {
-      unset($settings['logo_path']);
+    if (isset($settings[$key])) {
+      unset($settings[$key]);
       variable_set('theme_jake_settings', $settings);
     }
   }
 }
 
 /**
+ * Logo deletion submit handler.
+ */
+function jake_settings_delete_logo_submit(&$form, &$form_state) {
+  _jake_settings_delete_image('logo_path', $form_state);
+}
+
+/**
  * Print logo deletion submit handler.
  */
 function jake_settings_delete_printlogo_submit(&$form, &$form_state) {
-  if (file_delete($form_state['values']['printlogo_path'])) {
-    $settings = variable_get('theme_jake_settings', array());
-    if (isset($settings['printlogo_path'])) {
-      unset($settings['printlogo_path']);
-      variable_set('theme_jake_settings', $settings);
-    }
-  }
+  _jake_settings_delete_image('printlogo_path', $form_state);
+}
+
+/**
+ * Logo deletion submit handler.
+ */
+function jake_settings_delete_wallpaper_submit(&$form, &$form_state) {
+  _jake_settings_delete_image('wallpaper_path', $form_state);
 }
 
 /**
