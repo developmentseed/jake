@@ -94,6 +94,7 @@ function jake_blocks_palette($blocks, $get_links = FALSE) {
       else {
         $links["{$block->module}-{$block->delta}"] = array(
           'title' => $block->content,
+          'html' => TRUE,
           '#weight' => 100,
         );
       }

@@ -371,9 +371,7 @@ div.mn-share-popup span.close {
 
 #palette div.palette-links ul.links { float:left; }
 
-#palette div.palette-links ul.links span {
-  padding:0px 10px;
-  }
+#palette div.palette-links ul.links span { padding:0px 10px; }
 
 #palette div.palette-links ul.links a {
   width:30px;
@@ -400,6 +398,11 @@ div.mn-share-popup span.close {
   color:#fff;
   background:#222;
   }
+
+/* Sitewide clock */
+#palette div.palette-links ul.links li.mn_core-clock { line-height:15px; }
+#palette div.palette-links ul.links li.mn_core-clock * { display:block; }
+#palette div.palette-links ul.links li.mn_core-clock small { font-size:11px; }
 
 /**
  * Titles of various sorts ============================================
