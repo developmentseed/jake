@@ -87,6 +87,7 @@ function jake_blocks_palette($blocks, $get_links = FALSE) {
           'title' => $block->subject,
           'href' => $_GET['q'],
           'fragment' => "{$block->module}-{$block->delta}",
+          'attributes' => array('title' => $block->subject),
         );
         $dropdown .= theme('block', $block);
       }
