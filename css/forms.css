@@ -140,3 +140,18 @@ table tr th {
   }
 
 table tr td.active { background:#e0e4e8; }
+
+/**
+ * CONFIRMATION =======================================================
+ */
+form.confirmation {
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+
+  font-size:15px;
+  background:#fff;
+  padding:20px;
+  }
+
+form.confirmation div.container-inline { margin:20px 0px 0px; }
+ 

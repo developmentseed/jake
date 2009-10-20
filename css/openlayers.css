@@ -25,6 +25,9 @@ body.views-mode-map #main {
   body.views-mode-map.with-search #main { top:160px; }
   body.views-mode-map.with-tabs #main { top:140px; }
 
+div.openlayers-views-map,
+div.openlayers-views-map div.openlayers-map { position:relative; }
+
 body.views-mode-map div.openlayers-views-map,
 body.views-mode-map div.openlayers-views-map div.openlayers-map {
   position:absolute;
@@ -41,61 +44,45 @@ body.views-mode-map div.openlayers-views-map div.openlayers-map {
 
 div.openlayers-map circle { cursor:pointer; }
 
-div.olControlScaleLine { opacity:.65; }
-
-div.olControlScaleLineBottom,
-div.olControlScaleLineTop {
-  font-weight:bold;
-  line-height:20px;
-
-  color:#000;
-  border-color:#000;
-  border-width:0px 2px 2px;
-  }
-
-div.olControlScaleLineBottom { border-width:2px 2px 0px; }
-
-/**
- * Tooltips
- */
-div.openlayers-map div.olPopupContent { overflow:visible !important; }
-
-div.openlayers-map div.popup-name {
-  font-size:15px;
-  font-weight:bold;
-  color:#fff;
-  text-shadow:#000 0px 1px 5px;
-  }
-
 /**
  * Popup box
  */
 div.openlayers-map div.openlayers-popupbox {
   position:absolute;
   z-index:2000;
-  right:20px;
-  top:20px;
-  width:35%;
+  top:0px;
+  right:0px;
+  left:0px;
 
   overflow:hidden;
-
   color:#ccc;
   background:url(../images/help.png);
-  padding:5px;
-  -moz-border-radius:5px;
-  -webkit-border-radius:5px;
   }
 
 div.openlayers-map div.openlayers-popupbox a { color:#fff; }
 
-div.openlayers-map div.openlayers-popupbox a.popup-close {
-  float:right;
+div.openlayers-map h2.popup-title {
+  color:#eee;
+  font-size:15px;
   padding:10px;
   }
 
+div.openlayers-map div.openlayers-popupbox div.popup-count,
+div.openlayers-map div.openlayers-popupbox a.popup-close {
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  background:#000;
+  color:#fff;
+
+  line-height:20px;
+  padding:0px 10px;
+  position:absolute;
+  right:10px;
+  top:10px;
+  }
+
 div.openlayers-map div.popup-pager {
-  background:url(../images/help.png);
-  padding:10px 20px;
+  padding:10px;
   height:20px;
   }
 
@@ -107,48 +94,63 @@ div.openlayers-map ul.popup-links { float:right; }
     -moz-border-radius:10px;
     -webkit-border-radius:10px;
     padding:0px 10px;
-    background:#444;
+    background:#000;
     }
 
     div.openlayers-map ul.popup-links a.disabled { color:#999; }
 
-div.openlayers-map h2.popup-title {
-  font-size:15px;
-  font-weight:bold;
-  padding:10px 20px;
-  background:url(../images/help.png);
-  }
-
 div.openlayers-map div.popup-content {
   overflow:hidden;
   padding:20px;
+  background:url(../images/help.png);
   }
 
   div.openlayers-map div.popup-content img { display:none; }
 
 div.openlayers-map h2.point-title {
-  font-size:18px;
-  margin:0px 0px 20px;
+  font-size:15px;
+  height:40px;
+  overflow:hidden;
   }
 
 div.openlayers-map div.point-content {
-  max-height:120px;
+  height:100px;
   overflow:hidden;
   }
-  
-div.olControlPermalink {
+
+/* Fulscreen */
+body.views-mode-map div.openlayers-map div.openlayers-popupbox {
+  -moz-border-radius:0px 0px 0px 5px;
+  -webkit-border-bottom-left-radius:5px;
+  left:auto;
+  width:40%;
+  }
+
+/* In sidebar */
+div.sidebar div.openlayers-map div.popup { bottom:0px; }
+div.sidebar div.openlayers-map div.point-content { height:40px; }
+
+/**
+ * Permalink.
+ */
+div.openlayers-map div.olControlPermalink {
   position:absolute;
-  top:5px;
-  right:5px;
+  top:5px !important;
+  left:auto !important;
+  right:10px !important;
+  top:auto !important;
   font-size:10px;
 }
 
-div.olControlAttribution {
+/**
+ * Layer attribution.
+ */
+div.openlayers-map div.olControlAttribution {
   bottom:5px;
-  left:5px;
+  left:10px;
   color:#444;
-}
+  }
 
 body.views-mode-map div#openlayers-map-auto-id-0_OpenLayers_ViewPort {
-  position: absolute !important;
-}
+  position:absolute !important;
+  }

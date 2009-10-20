@@ -26,7 +26,7 @@ h1, h2, h3, h4, h5, h6 { font-weight:normal; }
 body.two-sidebars #canvas,
 body.sidebar-left #canvas {
   float:right;
-  width:75%;
+  width:74.9%;
   min-height:400px;
   }
 
@@ -789,6 +789,8 @@ div.utility-block input.form-submit {
   }
 
 div.utility-block input.form-text { width:50%; }
+
+input#edit-search { width:120px; }
 
 /**
  * Views ==============================================================
