@@ -14,7 +14,8 @@ body.views-mode-map #page-header {
 
 body.views-mode-map #canvas { 
   position:fixed; 
-  top: 60px;
+  top:60px;
+  left:25%;
   }
 
 body.views-mode-map #main {
