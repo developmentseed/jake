@@ -9,6 +9,9 @@ a {
   text-decoration:none;
   }
 
+a strong,
+a b { font-weight:inherit; }
+
 h1, h2, h3, h4, h5, h6 { font-weight:normal; }
 
 /**
@@ -504,8 +507,6 @@ div.feeditem {
     font-weight:bold;
     }
 
-div.feeditem-content { overflow:hidden; }
-
 div.feeditem-links {
   position:absolute;
   width:30px;
@@ -546,6 +547,16 @@ div.feeditem-links {
       padding-left:30px;
       }
 
+h2.feeditem-title,
+div.feeditem-meta,
+div.feeditem-labels,
+div.feeditem-content { margin:0px 0px 10px; }
+
+h2.feeditem-title {
+  font-size:18px;
+  letter-spacing:-1px;
+  }
+
 div.feeditem-meta {
   line-height:20px;
   font-size:11px;
@@ -553,15 +564,11 @@ div.feeditem-meta {
   border-bottom:1px solid #ddd;
   }
 
-div.feeditem-meta div.views-field-timestamp-1 { float:right; }
+  div.feeditem-meta div.views-field-timestamp-1 { float:right; }
 
-h2.feeditem-title {
-  padding:10px 0px;
-  font-size:18px;
-  letter-spacing:-1px;
-  }
+div.feeditem-content { overflow:hidden; }
 
-div.feeditem-labels { margin:10px 0px; }
+  div.feeditem-twitter div.feeditem-content { font-size:15px; }
 
 /**
  * List view mode.
@@ -587,6 +594,13 @@ body.views-mode-list h2.feeditem-title {
   }
 
   body.views-mode-list h2.feeditem-title { font-size:15px; }
+  body.views-mode-list div.feeditem-content img { display:none; }
+
+  /* Don't trim tweets */
+  body.views-mode-list div.feeditem-twitter div.feeditem-content {
+    white-space:normal;
+    height:auto;
+    }
 
 body.views-mode-list div.feeditem-labels { margin:0px; }
 
@@ -845,27 +859,32 @@ div.sidebar div.view-mn-search-saved div.views-field-title a {
 /**
  * Grid views.
  */
-table.views-view-grid td {
-  padding:5px;
-  vertical-align:top;
+table.views-view-grid {
+  -moz-border-radius:10px;
+  -webkit-border-radius:10px;
+  background:#ddd;
   }
 
-table.views-view-grid div.grid-item {
+table.views-view-grid {
+  border-collapse:separate;
+  border-spacing:5px;
+  }
+
+table.views-view-grid td {
+  vertical-align:top;
   -moz-border-radius:5px;
   -webkit-border-radius:5px;
-
   background:#fff;
   padding:20px;
   }
 
 /* MN Channels grid */
-div.view-mn-channels div.grid-item {
-  white-space:nowrap;
-  overflow:hidden;
+table.views-view-grid div.views-field-title { font-size:18px; }
+table.views-view-grid div.views-field-body { font-size:11px; }
+table.views-view-grid div.views-field-item-count {
+  margin:0px 0px 10px;
+  color:#999;
   }
-
-  table.views-view-grid div.views-field-title { font-size:18px; }
-  table.views-view-grid div.views-field-item-count { color:#999; }
 
 /**
  * Page tools =========================================================
