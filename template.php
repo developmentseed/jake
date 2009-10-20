@@ -239,7 +239,7 @@ function jake_preprocess_color_css(&$vars) {
       'foreground' => '#aaccee'
     );
     foreach ($defaults as $key => $default) {
-      $vars[$key] = !empty($settings[$key]) ? $settings[$key] : $default;
+      $vars[$key] = !empty($settings["{$key}_color"]) ? $settings["{$key}_color"] : $default;
       $rgb = _color_unpack($vars[$key], TRUE);
       $rgb = $rgb ? $rgb : _color_unpack($default, TRUE);
       $hsl = _color_rgb2hsl($rgb);

@@ -10,7 +10,11 @@ body.views-mode-map #page-header {
   left:25%;
   top:60px;
   right:0px;
-  z-index:500;
+  }
+
+body.views-mode-map #canvas { 
+  position:fixed; 
+  top: 60px;
   }
 
 body.views-mode-map #main {
