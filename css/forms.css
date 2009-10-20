@@ -154,4 +154,19 @@ form.confirmation {
   }
 
 form.confirmation div.container-inline { margin:20px 0px 0px; }
- 
+
+/**
+ * Feeds forms.
+ */
+form .help {
+  padding: 10px;
+}
+
+form .item-list ul li {
+  margin-left: 20px;
+  list-style:square;
+}
+
+#edit-feeds-FeedsCSVParser-delimiter {
+  width: 145px;
+}
