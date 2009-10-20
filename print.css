@@ -14,6 +14,7 @@ a {
 
 br,
 div.block,
+div.feeditem-labels,
 div.feeditem-links,
 div.comment-links,
 div.node-links,
@@ -213,6 +214,8 @@ div.openlayers-views-map div.openlayers-map {
   height:7in !important;
   }
 
+div.openlayers-map div.olControlPermalink,
+div.openlayers-map div.olControlAttribution,
 div.openlayers-map div.olControlLayerSwitcherPlus,
 div.openlayers-map div.openlayers-popupbox,
 div.openlayers-map div.olControlPanZoomBar { display:none !important; }
