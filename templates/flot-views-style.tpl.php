@@ -9,6 +9,11 @@
  * - $data: A flotData object.
  * - $options: A flotStyle object.
  */
+
+if (isset($js['flot_labels'], $js['inline'])) {
+  drupal_add_js(array('flot_labels' => $js['flot_labels']), 'setting');
+  drupal_add_js($js['inline'], 'inline', 'footer', FALSE, FALSE, FALSE);
+}
 ?>
 
 <div class="views-flot">

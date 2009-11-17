@@ -155,11 +155,17 @@ function jake_preprocess_flot_views_style(&$vars) {
 
   $id_string = $vars['element']['id'] = "jake-flot-{$id}";
 
+  // Add js to vars rather than calling drupal_add_js() directly.
+  // This gives subthemes a chance to override this JS or omit it altogether
+  // by overriding via preprocess or altering the flot-views-style template.
+  $vars['js'] = array();
+
+  // Label js.
   $labels = array();
   foreach ($vars['data'][0]->data as $point) {
     $labels[$point[0]] = format_date($point[0], 'custom', 'g:00a F j Y');
   }
-  drupal_add_js(array('flot_labels' => $labels), 'setting');
+  $vars['js']['flot_labels'] = $labels;
 
   // Hover tips.
   $inline_js = "$('#{$id_string}').bind('plothover', function (event, pos, item) {
@@ -180,7 +186,7 @@ function jake_preprocess_flot_views_style(&$vars) {
       $('#{$id_string}').siblings('div.flot-caption').html('');
     }
   });";
-  drupal_add_js($inline_js, 'inline', 'footer', FALSE, FALSE, FALSE);
+  $vars['js']['inline'] = $inline_js;
 }
 
 /**
