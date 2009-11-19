@@ -29,7 +29,7 @@ function jake_preprocess_page(&$vars) {
     $vars['admin_link'] = l(t('Admin'), 'admin/settings/site-information', array('attributes' => array('class' => 'admin-link')));
   }
   // Palette links
-  $vars['palette_links'] = theme('blocks_palette', array(), TRUE);
+  $vars['palette_links'] = theme('blocks_palette', TRUE);
 
   // Custom coloring and styles
   $vars['styles'] .= theme('color_css', theme_get_settings('jake'));
@@ -75,12 +75,13 @@ function jake_preprocess_block(&$vars) {
 /**
  * Theme function targeting palette block region.
  */
-function jake_blocks_palette($blocks, $get_links = FALSE) {
+function jake_blocks_palette($get_links = FALSE) {
   static $links;
   static $dropdown;
   if (!isset($dropdown)) {
     $dropdown = '';
     $links = array();
+    $blocks = function_exists('context_block_list') ? context_block_list('palette') : block_list('palette');
     foreach ($blocks as $block) {
       if (!empty($block->subject) || isset($_GET['print'])) {
         $links["{$block->module}-{$block->delta}"] = array(
