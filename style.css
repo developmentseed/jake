@@ -54,6 +54,9 @@ body.views-mode-map #left {
 
 body.views-mode-map #main div.main-wrapper { padding:0px; }
 
+body.views-mode-map #canvas #right {
+  display: none;
+}
 /**
  * Popup messages =====================================================
  */
