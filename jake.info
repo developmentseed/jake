@@ -22,3 +22,24 @@ regions[right] = "Right sidebar"
 regions[content] = "Content"
 
 features[0] = ""
+
+; Layout: Default
+layouts[default][name] = "Default"
+layouts[default][description] = "Standard three column page."
+layouts[default][template] = "page"
+layouts[default][regions][] = "palette"
+layouts[default][regions][] = "page_tools"
+layouts[default][regions][] = "page_title"
+layouts[default][regions][] = "left"
+layouts[default][regions][] = "right"
+layouts[default][regions][] = "content"
+
+; Layout: Single Sidebar
+layouts[sidebar][name] = "Single Sidebar"
+layouts[sidebar][description] = "Page with left sidebar."
+layouts[sidebar][template] = "sidebar"
+layouts[sidebar][regions][] = "palette"
+layouts[sidebar][regions][] = "page_tools"
+layouts[sidebar][regions][] = "page_title"
+layouts[sidebar][regions][] = "left"
+layouts[sidebar][regions][] = "content"

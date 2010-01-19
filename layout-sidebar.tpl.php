@@ -24,10 +24,6 @@
 
   <div id='main'><div id='content' class='main-wrapper clear-block'><?php print $content ?></div></div>
 
-  <?php if ($right): ?>
-    <div id='right'><div class='sidebar clear-block'><?php print $right ?></div></div>
-  <?php endif; ?>
-
 </div>
 
 <?php include 'page.footer.inc'; ?>
