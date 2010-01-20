@@ -213,7 +213,7 @@ div.help-link a {
   }
 
 #help,
-div.mn-share-popup {
+div.simpleshare-popup {
   font-size:18px;
   line-height:30px;
   font-weight:300;
@@ -223,7 +223,7 @@ div.mn-share-popup {
   }
 
   #help a,
-  div.mn-share-popup a { color:#fff; }
+  div.simpleshare-popup a { color:#fff; }
 
 #help {
   display:none;
@@ -303,9 +303,9 @@ body.help #branding a.help-link {
 body.help #help { display:block; }
 
 /* MN share */
-div.mn-share-popup ul.links { margin:10px 0px 0px; }
+div.simpleshare-popup ul.links { margin:10px 0px 0px; }
 
-div.mn-share-popup ul.links a {
+div.simpleshare-popup ul.links a {
   -moz-border-radius:15px;
   -webkit-border-radius:15px;
 
@@ -314,7 +314,7 @@ div.mn-share-popup ul.links a {
   margin-right:10px;
   }
 
-div.mn-share-popup span.close {
+div.simpleshare-popup span.close {
   cursor:pointer;
   float:right;
 
@@ -537,7 +537,7 @@ div.feeditem-links {
 
     div.feeditem-links a.data-node-add { background:url(images/sprite.png) -370px 0px no-repeat; }
     div.feeditem-links a.data-node-remove { display:none; background:url(images/sprite.png) -370px -30px no-repeat; }
-    div.feeditem-links a.mn-share { background:url(images/sprite.png) -370px -270px no-repeat; }
+    div.feeditem-links a.simpleshare { background:url(images/sprite.png) -370px -270px no-repeat; }
 
     div.feeditem-links a:hover {
       background-color:#444;
