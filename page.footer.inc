@@ -13,10 +13,7 @@
 <?php endif; ?>
 
 <?php if ($palette): ?>
-  <div id='palette'>
-    <div class='palette-links clear-block'><?php print $palette_links ?></div>
-    <div class='palette-blocks'><?php print $palette ?></div>
-  </div>
+  <div id='palette'><?php print $palette ?></div>
 <?php endif; ?>
 
 <?php print $closure ?>

@@ -351,24 +351,19 @@ div.simpleshare-popup span.close {
   bottom:0px;
   right:20px;
   z-index:1000;
-  }
 
-  #palette a { color:#fff; }
-
-#palette div.palette-links {
   -moz-border-radius-topleft:5px;
   -moz-border-radius-topright:5px;
   -webkit-border-top-left-radius:5px;
   -webkit-border-top-right-radius:5px;
   background:url(images/help.png);
-  padding:5px;
-  line-height:30px;
   }
 
-#palette div.palette-links label {
-  padding:0px 10px;
-  font-size:10px;
-  text-transform:uppercase;
+  #palette a { color:#fff; }
+
+#palette div.widget {
+  line-height:30px;
+  padding:5px;
   float:left;
   }
 
@@ -376,7 +371,8 @@ div.simpleshare-popup span.close {
 
 #palette div.palette-links ul.links span { padding:0px 10px; }
 
-#palette div.palette-links ul.links a {
+#palette div.widget-toggle a {
+  display:block;
   width:30px;
   height:30px;
   text-indent:-999px;
@@ -390,12 +386,13 @@ div.simpleshare-popup span.close {
   background-position:30px 30px;
   }
 
-  #palette div.palette-links ul.links li.data_node-feeds_data_syndication a { background-position:-370px 0px; }
-  #palette div.palette-links ul.links li.mn_core-user a,
-  #palette div.palette-links ul.links li.user-0 a { background-position:-370px -240px; }
+  #palette div.widget-data_node-feeds_data_syndication a { background-position:-370px 0px; }
 
-  #palette div.palette-links ul.links a:hover { background-color:#222; }
-  #palette div.palette-links ul.links a.palette-active { background-color:#fff; }
+  #palette div.widget-mn_core-user a,
+  #palette div.widget-user-0 a { background-position:-370px -240px; }
+
+  #palette div.widget-toggle a:hover { background-color:#222; }
+  #palette div.widget-toggle a.palette-active { background-color:#fff; }
 
 #palette input.form-submit {
   color:#fff;
@@ -403,9 +400,9 @@ div.simpleshare-popup span.close {
   }
 
 /* Sitewide clock */
-#palette div.palette-links ul.links li.mn_core-clock { line-height:15px; }
-#palette div.palette-links ul.links li.mn_core-clock * { display:block; }
-#palette div.palette-links ul.links li.mn_core-clock small { font-size:11px; }
+#palette #block-mn_core-clock { line-height:15px; }
+#palette #block-mn_core-clock * { display:block; }
+#palette #block-mn_core-clock small { font-size:11px; }
 
 /**
  * Titles of various sorts ============================================
@@ -702,7 +699,7 @@ div.context-links a:hover { background:#fff; }
 div.sidebar { padding:20px 20px 20px 0px; }
 
 div.admin-panel,
-#palette div.block,
+#palette div.block-toggle,
 div.sidebar div.block {
   -moz-border-radius:5px;
   -webkit-border-radius:5px;
@@ -712,7 +709,7 @@ div.sidebar div.block {
   margin:0px 0px 10px;
   }
 
-  #palette div.block {
+  #palette div.block-toggle {
     position:absolute;
     bottom:45px;
     right:0px;

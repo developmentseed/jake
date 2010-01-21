@@ -5,7 +5,6 @@
  */
 function jake_theme($existing, $type, $theme, $path) {
   return array(
-    'blocks_palette' => array(),
     'color_css' => array(
       'arguments' => array('settings' => array()),
       'template' => 'color-css',
@@ -36,8 +35,6 @@ function jake_preprocess_page(&$vars) {
   if (user_access('administer mn')) {
     $vars['admin_link'] = l(t('Admin'), 'admin/settings/site-information', array('attributes' => array('class' => 'admin-link')));
   }
-  // Palette links
-  $vars['palette_links'] = theme('blocks_palette', TRUE);
 
   // Custom coloring and styles
   $vars['styles'] .= theme('color_css', theme_get_settings('jake'));
@@ -62,6 +59,16 @@ function jake_preprocess_page(&$vars) {
  * Preprocessor for theme('block').
  */
 function jake_preprocess_block(&$vars) {
+  if ($vars['block']->region === 'palette') {
+    if (!empty($vars['title'])) {
+      $toggler = l($vars['title'], $_GET['q'], array('fragment' => "{$vars['block']->module}-{$vars['block']->delta}", 'attributes' => array('class' => 'palette-link', 'title' => $vars['block']->subject)));
+      $vars['pre_object'] = "<div class='widget widget-toggle widget-{$vars['block']->module}-{$vars['block']->delta}'>{$toggler}</div>";
+      $vars['attr']['class'] .= ' block-toggle';
+    }
+    else {
+      $vars['attr']['class'] .= ' widget';
+    }
+  }
   $classgroups = array(
     'utility-block' => array(
       'mn_search-status',
@@ -78,40 +85,6 @@ function jake_preprocess_block(&$vars) {
       $vars['attr']['class'] .= " {$class}";
     }
   }
-}
-
-/**
- * Theme function targeting palette block region.
- */
-function jake_blocks_palette($get_links = FALSE) {
-  static $links;
-  static $dropdown;
-  if (!isset($dropdown)) {
-    $dropdown = '';
-    $links = array();
-    $blocks = function_exists('context_block_list') ? context_block_list('palette') : block_list('palette');
-    foreach ($blocks as $block) {
-      if (!empty($block->subject) || isset($_GET['print'])) {
-        $links["{$block->module}-{$block->delta}"] = array(
-          'title' => $block->subject,
-          'href' => $_GET['q'],
-          'fragment' => "{$block->module}-{$block->delta}",
-          'attributes' => array('title' => $block->subject),
-        );
-        $dropdown .= theme('block', $block);
-      }
-      else {
-        $links["{$block->module}-{$block->delta}"] = array(
-          'title' => $block->content,
-          'html' => TRUE,
-          '#weight' => 100,
-        );
-      }
-    }
-    uasort($links, 'element_sort');
-    $links = theme('links', $links, array('class' => 'links'));
-  }
-  return $get_links ? $links : $dropdown;
 }
 
 /**

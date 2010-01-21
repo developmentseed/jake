@@ -62,20 +62,19 @@ Drupal.behaviors.jake = function (context) {
   /**
    * Palette links/block management.
    */
-  $('div.palette-links a:not(.processed)').each(function() {
+  $('#palette a.palette-link:not(.processed)').each(function() {
     $(this).addClass('processed');
     $(this).click(function() {
       if (!$(this).is('.palette-active')) {
-        $('div.palette-links a').removeClass('palette-active');
-        $('div.palette-blocks div.block').hide();
-
+        $('#palette a.palette-link').removeClass('palette-active');
+        $('#palette div.block-toggle').hide();
         var block = '#block-' + $(this).attr('href').split('#')[1];
         $(block).show();
         $(this).addClass('palette-active');
       }
       else {
-        $('div.palette-links a').removeClass('palette-active');
-        $('div.palette-blocks div.block').hide();
+        $('#palette a.palette-link').removeClass('palette-active');
+        $('#palette div.block-toggle').hide();
       }
       return false;
     });
