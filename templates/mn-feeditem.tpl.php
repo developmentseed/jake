@@ -1,5 +1,5 @@
 <div class='feeditem clear-block'>
-  
+
   <div class='feeditem-meta clear-block'>
     <?php print jake_views_render_field($fields['timestamp_1']) ?>
     <?php print jake_views_render_field($fields['title_1']) ?>
@@ -14,7 +14,7 @@
   </div>
 
   <div class='feeditem-labels clear-block'>
-    <?php print jake_views_render_field($fields['data_node_list']) ?>
+    <?php print jake_views_render_field($fields['data_taxonomy_form']) ?>
   </div>
 
   <div class='feeditem-links clear-block'>
