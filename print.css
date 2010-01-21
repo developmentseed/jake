@@ -1,0 +1,283 @@
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size:10pt;
+  line-height:16pt;
+  margin:0pt;
+  padding:0pt;
+  }
+
+a {
+  font-weight:bold;
+  color:#000;
+  text-decoration:none;
+  }
+
+br,
+div.block,
+div.feeditem-labels,
+div.feeditem-links,
+div.comment-links,
+div.node-links,
+ul.links,
+div.dsadmin,
+div.page-links,
+div.box,
+div.picture,
+form { display:none; }
+
+ul.inline,
+ul.inline li,
+ul.inline li a {
+  float:none;
+  display:inline;
+  }
+
+/**
+ * General structure ===================================================
+ */
+
+#page-header {
+  padding:0pt 0pt 14pt;
+  border-bottom:2pt solid #999;
+  }
+
+#page-header h1.page-title { font-size:14pt; }
+
+#footer { padding-top:16pt; }
+
+/**
+ * FEED ITEMS ==========================================================
+ */
+div.item-list h3 {
+  padding:16pt 0pt 14pt;
+  border-bottom:2pt solid #999;
+  }
+
+div.feeditem {
+  page-break-inside:avoid;
+  padding:16pt 0pt 15pt;
+  border-bottom:1pt solid #ccc;
+  }
+
+div.feeditem-meta {
+  font-size:8pt;
+  float:left;
+  width:25%;
+  }
+
+h2.feeditem-title,
+div.feeditem-content,
+div.feeditem-labels {
+  float:right;
+  clear:right;
+  width:70%;
+  }
+
+  div.feeditem-content { overflow:hidden; }
+
+h2.feeditem-title {
+  font-size:14pt;
+  padding-bottom:15pt;
+  border-bottom:1pt solid #ccc;
+  margin-bottom:16pt;
+  }
+
+/*
+ * FILTER TEXT =========================================================
+ */
+
+.prose a {
+  font-style:italic;
+  border-bottom:1pt solid #ccc;
+  }
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6,
+.prose p,
+.prose ul,
+.prose ol,
+.prose blockquote {
+  margin: 0pt 0pt 16pt;
+  }
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+  border-bottom:1pt solid #ccc;
+  padding-bottom:7pt;
+  font-weight:normal;
+  font-size:12pt;
+  }
+
+.prose h1 { font-size:15pt; }
+
+.prose h2 { font-size:13pt; }
+
+.prose ol li,
+.description ol li {
+  list-style:decimal;
+  }
+
+.prose img {
+  page-break-inside:avoid;
+  display:block;
+  }
+
+/**
+ * PRINT PAGE HEADER ==================================================
+ */
+div.print-header {
+  line-height:.5in;
+  height:.5in;
+  padding: 0pt 0pt 16pt;
+  }
+
+  div.print-header div.date {
+    font-size:8pt;
+    font-weight:bold;
+    float:right;
+    }
+
+  div.print-header h1.site-name {
+    float:left;
+    font-size:14pt;
+    }
+
+  div.print-header img.logo { display:block; height:.5in; }
+
+/**
+ * NODE ===============================================================
+ */
+h2.node-title {
+  line-height:20pt;
+  font-size:18pt;
+  letter-spacing:-0.5pt;
+  font-weight:normal;
+  margin: 0pt 0pt 10pt;
+  }
+
+  h2.node-title a { text-decoration:none; }
+
+div.node-submitted,
+div.comment-submitted {
+  margin:10pt 0pt;
+  color:#666;
+  font-family: Arial, sans-serif;
+  font-size:7pt;
+  }
+
+div.node .footer {
+  margin:10pt 0pt;
+  font-size:6pt;
+  }
+
+/**
+ * TABLES =============================================================
+ */
+table {
+  border-collapse: collapse;
+  width:100%;
+  }
+
+table th {
+  font-family: Arial, Helvetica, sans-serif;
+  }
+
+table th,
+table td {
+  font-size:9pt;
+  padding: 5pt 10pt;
+  border:1pt solid #ccc;
+  }
+
+table.comparison tr,
+table.comparison td,
+table.comparison th {
+  text-align:left;
+  border-left: 0px;
+  border-right: 0px;
+  }
+
+/**
+ * OpenLayers =========================================================
+ */
+div.openlayers-views-map,
+div.openlayers-views-map div.openlayers-map {
+  width:100% !important;
+  height:7in !important;
+  }
+
+div.openlayers-map div.olControlPermalink,
+div.openlayers-map div.olControlAttribution,
+div.openlayers-map div.olControlLayerSwitcherPlus,
+div.openlayers-map div.openlayers-popupbox,
+div.openlayers-map div.olControlPanZoomBar { display:none !important; }
+
+/**
+ * Modifications for the screen to make the page a bit more reasonable
+ * when previewing before print.
+ */
+@media screen {
+  body {
+    background:#f8f8f8;
+    padding:100px 0px;
+    }
+
+  div.limiter {
+    background:#fff;
+    padding:.5in;
+    width:7in;
+    border:5pt solid #eee;
+    }
+
+  #block-mn_core-print,
+  #block-mn_core-print form { display:block; }
+
+  #block-mn_core-print {
+    position:fixed;
+    top:0px;
+    left:0px;
+    right:0px;
+    z-index:1000;
+
+    padding:15px 20px;
+    font-size:13px;
+    line-height:30px;
+    height:30px;
+
+    background:url(images/help.png) 0% 100% repeat-x;
+    color:#fff;
+    }
+
+  #block-mn_core-print form { float:right; }
+
+  #block-mn_core-print div.form-item,
+  #block-mn_core-print input.form-submit,
+  #block-mn_core-print div.back-link { float:left; }
+
+  #block-mn_core-print div.form-item { padding:0px 10px; }
+
+  #block-mn_core-print select,
+  #block-mn_core-print input.form-text {
+    padding:3px;
+    background:#fff;
+    }
+
+  #block-mn_core-print input.form-submit,
+  #block-mn_core-print a {
+    -moz-border-radius:15px;
+    -webkit-border-radius:15px;
+    display:block;
+    background:#222;
+    line-height:20px;
+    padding:5px 15px;
+    color:#fff;
+  }
+}

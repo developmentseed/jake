@@ -1,0 +1,1 @@
+<?php include 'views-view-fields--mn-feeds.tpl.php' ?>

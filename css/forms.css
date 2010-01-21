@@ -1,0 +1,172 @@
+/**
+ * Forms ==============================================================
+ */
+
+/* Layout */
+ul.node-form-links {
+  background:#e8e8e8;
+  border-bottom: 1px solid #eee;
+  padding:5px 10px 4px;
+  line-height:30px;
+  font-size:15px;
+  }
+
+ul.node-form-links a {
+  color:#999;
+  -moz-border-radius:15px;
+  padding:0px 15px;
+  }
+
+ul.node-form-links a.selected { background:#444; color:#fff; }
+
+div.node-form div.buttons { padding:10px 0px; }
+
+div.form-sidebar div.sidebar { display:none; }
+
+/* Items */
+div.form-item {
+  background:#e8e8e8;
+  padding:10px 10px 9px;
+  border-bottom:1px solid #eee;
+  }
+
+div.form-item label {
+  color:#999;
+  line-height:20px;
+  font-size:9px;
+  text-transform:uppercase;
+  }
+
+  div.form-item label.option {
+    font-size:13px;
+    text-transform:none;
+    }
+
+  div.form-item div.form-item {
+    background:transparent;
+    border:0px;
+    padding:0px;
+    }
+
+/* Elements */
+input.form-text,
+textarea,
+select {
+  width:90%;
+  padding:5px;
+  background:#fff;
+  border-color:#ccc;
+  }
+
+input.form-submit {
+  -moz-border-radius:30px;
+  -webkit-border-radius:30px;
+  -khtml-border-radius:30px;
+
+  font-size:15px;
+  letter-spacing:-1px;
+
+  color:#222;
+  background:#ccc;
+  padding:5px 15px;
+  margin:0px;
+  }
+
+  input.form-submit:hover { background:#444; color:#fff; }
+  input.form-submit:active { background:#000; color:#fff; }
+
+/* Fieldsets */
+div.fieldset {
+  background:#f8f8f8;
+  border-bottom:1px solid #eee;
+  }
+
+div.collapsible,
+div.fieldset div.form-item,
+div.fieldset-content { background:#f8f8f8; }
+
+  div.fieldset div.fieldset { border-left:9px solid #ddd; }
+
+  div.fieldset div.fieldset h2.fieldset-title,
+  div.fieldset div.fieldset div.fieldset-content { border-left:1px solid #f8f8f8; }
+
+div.collapsed { background:#e8e8e8; }
+
+div.fieldset div.description { padding:0px 10px; }
+div.fieldset div.form-item div.description { padding:0px; }
+
+h2.fieldset-title {
+  padding:10px 10px 9px;
+  font-size:11px;
+  font-weight:bold;
+  }
+
+  h2.fieldset-title,
+  h2.fieldset-title a { color:#666; }
+
+div.collapsible h2.fieldset-title a {
+  background:url(../images/sprite.png) -380px -380px no-repeat;
+  display:block;
+  padding-left:25px;
+  }
+
+  div.collapsed h2.fieldset-title a { background-position:-380px -360px; }
+
+/**
+ * TABLES =============================================================
+ */
+table tr.even,
+table tr.odd {
+  border-top:1px solid #eee;
+  background:#f8f8f8;
+  }
+
+div.form-item table,
+div.fieldset table { margin:0px; }
+
+div.fieldset table div.form-item,
+div.fieldset table tr.even,
+div.fieldset table tr.odd { background:#fff; }
+
+table tr th,
+table tr td { padding:5px 10px 4px; }
+
+table tr th.checkbox,
+table tr th {
+  text-align:left;
+  font-size:10px;
+  text-transform:uppercase;
+  color:#999;
+  }
+
+table tr td.active { background:#e0e4e8; }
+
+/**
+ * CONFIRMATION =======================================================
+ */
+form.confirmation {
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+
+  font-size:15px;
+  background:#fff;
+  padding:20px;
+  }
+
+form.confirmation div.container-inline { margin:20px 0px 0px; }
+
+/**
+ * Feeds forms.
+ */
+form .help {
+  padding: 10px;
+}
+
+form .item-list ul li {
+  margin-left: 20px;
+  list-style:square;
+}
+
+#edit-feeds-FeedsCSVParser-delimiter {
+  width: 145px;
+}
