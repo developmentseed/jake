@@ -5,11 +5,6 @@
  */
 function jake_theme($existing, $type, $theme, $path) {
   return array(
-    'color_css' => array(
-      'arguments' => array('settings' => array()),
-      'template' => 'color-css',
-      'path' => drupal_get_path('theme', 'jake') .'/templates',
-    ),
     'site_name' => array(),
     'print_logo' => array(),
   );
@@ -38,9 +33,6 @@ function jake_preprocess_page(&$vars) {
 
   // Add body class for layout.
   $vars['attr']['class'] .= !empty($vars['template_files']) ? ' '. end($vars['template_files']) : '';
-
-  // Custom coloring and styles
-  $vars['styles'] .= theme('color_css', theme_get_settings('jake'));
 
   // Site name
   $vars['site_name'] = theme('site_name');
@@ -129,13 +121,14 @@ function jake_preprocess_node(&$vars) {
 
 /**
  * Preprocessor for theme('flot_views_style').
+ * Supply DesignKit colors to OpenLayers styles.
  */
 function jake_preprocess_flot_views_style(&$vars) {
   static $id = 0;
   $id++;
 
-  $settings = theme_get_settings('jake');
-  $vars['options']->colors = array(!empty($settings['foreground_color']) ? $settings['foreground_color'] : '#ace');
+  $color = variable_get('designkit_color', array());
+  $vars['options']->colors = array(!empty($color['foreground_color']) ? $color['foreground_color'] : '#ace');
   $vars['options']->lines->fill = .25;
   $vars['options']->grid->tickColor = '#eee';
   $vars['options']->grid->backgroundColor = '#fff';
@@ -174,6 +167,19 @@ function jake_preprocess_flot_views_style(&$vars) {
     }
   });";
   $vars['js']['inline'] = $inline_js;
+}
+
+/**
+ * Override of theme_openlayers_styles().
+ * Supply DesignKit colors to OpenLayers styles.
+ */
+function jake_openlayers_styles($styles = array(), $map = array()) {
+  $color = variable_get('designkit_color', array());
+  if (isset($styles['default'])) {
+    $styles['default']['fillColor'] = !empty($color['foreground_color']) ? $color['foreground_color'] : '#ace';
+    $styles['default']['strokeColor'] = !empty($color['foreground_color']) ? $color['foreground_color'] : '#ace';
+  }
+  return $styles;
 }
 
 /**
@@ -217,65 +223,14 @@ function jake_status_messages($display = NULL) {
 }
 
 /**
- * Crunch out some color variations for our CSS.
- */
-function jake_preprocess_color_css(&$vars) {
-  $settings = !empty($vars['settings']) ? $vars['settings'] : array();
-
-  $vars['wallpaper_path'] = !empty($settings['wallpaper_path']) && file_exists($settings['wallpaper_path']) ? file_create_url($settings['wallpaper_path']) : '';
-  $vars['wallpaper_position'] = !empty($settings['wallpaper_position']) ? $settings['wallpaper_position'] : 'bottom right';
-
-  if (module_exists('color')) {
-    $defaults = array(
-      'background' => '#e0e0e0',
-      'header' => '#222222',
-      'foreground' => '#aaccee'
-    );
-    foreach ($defaults as $key => $default) {
-      $vars[$key] = !empty($settings["{$key}_color"]) ? $settings["{$key}_color"] : $default;
-      $rgb = _color_unpack($vars[$key], TRUE);
-      $rgb = $rgb ? $rgb : _color_unpack($default, TRUE);
-      $hsl = _color_rgb2hsl($rgb);
-      $vars["{$key}_reverse"] = $hsl[2] > .65 ? FALSE : TRUE;
-
-      $modifiers = array(
-        'w10' => array('+', .1),
-        'w25' => array('+', .25),
-        'w50' => array('+', .5),
-        'b10' => array('-', .1),
-        'b25' => array('-', .25),
-        'b50' => array('-', .5),
-        'text' => $hsl[2] > .65 ? array('-', .9) : array('+', 1000),
-      );
-      foreach ($modifiers as $id => $modifier) {
-        $color_hsl = $hsl;
-        switch ($modifier[0]) {
-          case '-':
-            $color_hsl[2] = $color_hsl[2] * (1 - $modifier[1]);
-            break;
-          default:
-            $color_hsl[2] = $color_hsl[2] * (1 + $modifier[1]);
-            $color_hsl[2] = ($color_hsl[2] > 1) ? 1 : $color_hsl[2];
-            break;
-        }
-        $color_rgb = _color_hsl2rgb($color_hsl);
-        $vars["{$key}_{$id}"] = _color_pack($color_rgb, TRUE);
-      }
-    }
-  }
-}
-
-/**
  * Theme function for generating a site logo/name.
  */
 function jake_site_name() {
-  $settings = theme_get_settings('jake');
+  $image = variable_get('designkit_image', array());
   $name = check_plain(variable_get('site_name', 'Drupal'));
-  if (!empty($settings['logo_path']) && file_exists($settings['logo_path']) && module_exists('imagecache') && imagecache_preset_by_name('logo')) {
-    $url = imagecache_create_url('logo', $settings['logo_path']);
-    return l(t($name), '<front>', array('attributes' => array('class' => 'logo', 'style' => 'background-image:url('.$url.')')));
+  if (!empty($image['logo'])) {
+    return l(t($name), '<front>', array('attributes' => array('class' => 'logo')));
   }
-  // Last resort, use just the name
   return l(t($name), '<front>');
 }
 

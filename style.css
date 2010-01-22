@@ -27,13 +27,14 @@ div.block div.block-content {
   -webkit-box-shadow:none;
   }
 
-#page-header,
 .growl .messages,
 .sidebar .block,
 .page-content .node,
 .page-content .block,
 .page-content div.pager,
-.page-content .view-content,
+.page-content div.view-empty,
+.page-content .view-content .item-list,
+.page-content .view-content table,
 .page-content > form {
   -moz-box-shadow:#999 0px 0px 3px;
   -webkit-box-shadow:#999 0px 1px 3px;
@@ -44,7 +45,9 @@ div.block div.block-content {
 .page-content .node,
 .page-content .block,
 .page-content div.pager,
-.page-content .view-content,
+.page-content div.view-empty,
+.page-content .view-content .item-list,
+.page-content .view-content table,
 .page-content > form {
   border:0px;
   -moz-border-radius:5px;
@@ -57,6 +60,8 @@ div.block div.block-content {
 #left {
   float:left;
   width:25%;
+  background:url(images/halftone.png) 0% 100% repeat-x;
+  padding-bottom:60px;
   }
 
 #canvas {
@@ -104,11 +109,10 @@ body.views-mode-map #main div.page-content { padding:0px; }
 #branding {
   height:50px;
   line-height:50px;
-  padding:5px 20px 2px;
-  border-bottom:3px solid #111;
+  padding:5px 20px;
 
   overflow:hidden;
-  background:#222;
+  background:#222 url(images/sprite.png) 0px -540px repeat-x;
   }
 
 h1.site-name { float:left; }
@@ -398,10 +402,10 @@ div.simpleshare-popup span.close {
 
 h2.page-title,
 div.views-exposed-form {
-  background:#e8e8e8;
+  background:#e8e8e8 url(images/sprite.png) 0px -500px repeat-x;
 
   padding:4px 20px;
-  border-top:1px solid #f8f8f8;
+  border-top:1px solid #fff;
   border-bottom:1px solid #ddd;
 
   line-height:30px;
@@ -430,6 +434,8 @@ div.navbar h2.block-title {
 
   line-height:30px;
   padding:4px 20px;
+
+  background:#f8f8f8 url(images/sprite.png) 0px -500px repeat-x;
   border-top:1px solid #fff;
   border-bottom:1px solid #e8e8e8;
   }
@@ -466,7 +472,7 @@ div.tabs ul.links a:hover {
 /**
  * Feed item lists ====================================================
  */
-.page-content .view-content { background:#fff; }
+.page-content .view-content .item-list { background:#fff; }
 
 div.item-list {
   background:transparent;
@@ -590,7 +596,6 @@ div.data-taxonomy-tags a {
   div.data-taxonomy-tags ul.data-taxonomy-tags li a { float:left; }
 
   div.data-taxonomy-tags ul.data-taxonomy-tags li a {
-    background:#cde;
     padding:0px 5px;
     margin-right:2px;
     }
@@ -668,8 +673,8 @@ div.sidebar {
   }
 
 div.navbar {
-  background:url(images/halftone.png) 0% 100% repeat-x;
-  padding-bottom:60px;
+  background:#f8f8f8;
+  min-height:40px;
   }
 
   body.views-mode-map div.navbar { background:#f8f8f8; }
@@ -824,8 +829,10 @@ div.sidebar h2.block-title {
   }
 
 #page-title div.utility-block {
+  -moz-border-radius:0px;
+  -webkit-border-radius:0px;
   height:30px;
-  padding:10px 20px 9px;
+  padding:5px 20px 4px;
   border-width:0px 0px 1px;
   border-style:solid;
   }
@@ -879,13 +886,17 @@ div.views-exposed-form div.views-exposed-widget input.form-submit { margin:0px; 
 div.views-exposed-form div.form-item,
 div.views-exposed-form div.views-exposed-widget { padding:0px; border:0px; margin:0px; }
 
-div.page-content div.view-empty {
-  -moz-border-radius:5px;
-  -webkit-border-radius:5px;
-
-  font-size:15px;
+.page-content div.view-empty {
   background:#fff;
+  font-size:15px;
   padding:20px;
+  }
+
+.page-content div.view-empty li {
+  border:0px;
+  display:list-item;
+  list-style:square;
+  margin-left:20px;
   }
 
 div.navbar div.view-empty,
@@ -923,13 +934,7 @@ div.sidebar div.view-mn-search-saved div.views-field-title a {
 /**
  * Grid views.
  */
-table.views-view-grid {
-  -moz-border-radius:5px;
-  -webkit-border-radius:5px;
-  -moz-box-shadow:none;
-  -webkit-box-shadow:none;
-  background:#ddd;
-  }
+table.views-view-grid { background:#ddd; }
 
 table.views-view-grid {
   border-collapse:separate;
@@ -984,8 +989,9 @@ table.views-view-grid div.views-field-item-count {
   line-height:30px;
   height:30px;
   float:right;
-  padding:5px 20px 4px;
-  background:#e8e8e8;
+  padding:4px 20px;
+  background:#e8e8e8 url(images/sprite.png) 0px -500px repeat-x;
+  border-top:1px solid #fff;
   border-bottom:1px solid #ddd;
   }
 
@@ -1084,13 +1090,24 @@ div.pager ul.pager-links a {
   background-position:30px 30px;
   }
 
+  div.pager ul.pager-links li:last-child a {
+    -moz-border-radius:0px 0px 5px 5px;
+    -webkit-border-top-right-radius:5px;
+    -webkit-border-bottom-right-radius:5px;
+    }
+
   div.pager ul.pager-links li.pager-previous a { background-position:0px -20px; }
   div.pager ul.pager-links li.pager-first a { background-position:-60px -20px; }
   div.pager ul.pager-links li.pager-next a { background-position:-30px -20px; }
   div.pager ul.pager-links li.pager-last a { background-position:-90px -20px; }
 
-div.pager li.pager-current { background:#ccc; }
-div.pager li a:hover { background-color:#ccc; color:#fff; }
+  div.pager ul.pager-links li.pager-previous a:hover { background-position:0px -50px; }
+  div.pager ul.pager-links li.pager-first a:hover { background-position:-60px -50px; }
+  div.pager ul.pager-links li.pager-next a:hover { background-position:-30px -50px; }
+  div.pager ul.pager-links li.pager-last a:hover { background-position:-90px -50px; }
+
+  div.pager li.pager-current { background:#ccc; }
+  div.pager li a:hover { background-color:#ccc; color:#fff; }
 
 /**
  * Pagers in blocks

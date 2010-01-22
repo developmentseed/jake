@@ -8,11 +8,9 @@ project = "jake"
 
 scripts[] = "js/theme.js"
 
-; stylesheets[screen][] = "css/admin.css"
-; stylesheets[screen][] = "css/forms.css"
 stylesheets[print][] = "print.css"
 stylesheets[screen][] = "css/openlayers.css"
-stylesheets[screen][style] = "style.css"
+stylesheets[screen][] = "style.css"
 
 regions[palette] = "Palette"
 regions[page_tools] = "Page tools"
@@ -21,7 +19,43 @@ regions[left] = "Left sidebar"
 regions[right] = "Right sidebar"
 regions[content] = "Content"
 
+; Theme features ======================================================
+
 features[0] = ""
+
+; DesignKit ===========================================================
+
+; Site logo
+designkit[image][logo][title] = "Site logo"
+designkit[image][logo][description] = "Header logo."
+designkit[image][logo][imagecache] = "imagecache_scale:240x40"
+
+; Print logo
+designkit[image][printlogo][title] = "Print logo"
+designkit[image][printlogo][description] = "Print logo."
+designkit[image][printlogo][imagecache] = "imagecache_scale:720x120"
+
+; Wallpaper
+designkit[image][wallpaper][title] = "Wallpaper"
+designkit[image][wallpaper][description] = "Wallpaper."
+designkit[image][wallpaper][imagecache] = "imagecache_scale:600x300"
+
+; Background
+designkit[color][background_color][title] = "Background"
+designkit[color][background_color][description] = "Background color."
+designkit[color][background_color][default] = "#e0ecec"
+
+; Foreground
+designkit[color][foreground_color][title] = "Foreground"
+designkit[color][foreground_color][description] = "Foreground color."
+designkit[color][foreground_color][default] = "#445566"
+
+; Header
+designkit[color][header_color][title] = "Header"
+designkit[color][header_color][description] = "Header color."
+designkit[color][header_color][default] = "#445566"
+
+; Context layouts =====================================================
 
 ; Layout: Default
 layouts[default][name] = "Default"
