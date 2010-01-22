@@ -1,6 +1,7 @@
 <?php if ($background && $header && $foreground): ?>
 
 <style type='text/css'>
+/*
 body {
   background-color:<?php print $background ?>;
   <?php if ($wallpaper_path): ?>
@@ -10,6 +11,7 @@ body {
     background-position:<?php print $wallpaper_position ?>;
   <?php endif; ?>
   }
+*/
 
 /**
  * Background color ===================================================

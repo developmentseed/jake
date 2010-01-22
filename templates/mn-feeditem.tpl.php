@@ -13,13 +13,14 @@
     <?php print jake_views_render_field($fields['description']) ?>
   </div>
 
+  <?php if ($labels = jake_views_render_field($fields['data_taxonomy_form'])): ?>
   <div class='feeditem-labels clear-block'>
-    <?php print jake_views_render_field($fields['data_taxonomy_form']) ?>
+    <?php print $labels ?>
   </div>
+  <?php endif; ?>
 
   <div class='feeditem-links clear-block'>
     <?php print jake_views_render_field($fields['simpleshare_link']) ?>
-    <?php print jake_views_render_field($fields['data_node_add_remove']) ?>
   </div>
 
 </div>

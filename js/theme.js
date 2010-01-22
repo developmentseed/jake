@@ -13,25 +13,11 @@ Drupal.behaviors.jake = function (context) {
   });
 
   /**
-   * Node form tabs.
-   */
-  $('ul.node-form-links a:not(.processed)').each(function() {
-    $(this).addClass('processed');
-    $(this).click(function() {
-      $('.node-form-panel').hide();
-      $('ul.node-form-links a').removeClass('selected');
-      $(this).addClass('selected');
-      var target = $(this).attr('href').split('#')[1];
-      $('div.node-form .'+ target).show();
-    });
-  });
-
-  /**
    * Growl-like messages.
    */
-  $('#growl > div:not(.processed)').each(function() {
+  $('.growl > div:not(.processed)').each(function() {
     $(this).addClass('processed');
-    $('span.close', this).click(function() {
+    $('a.close', this).click(function() {
       $(this).parent().hide('fast');
     });
     if ($(this).is('.autoclose')) {

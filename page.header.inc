@@ -12,10 +12,6 @@
 
 <?php if (!empty($admin)) print $admin ?>
 
-<?php if ($show_messages && $messages): ?>
-  <div id='growl'><?php print $messages; ?></div>
-<?php endif; ?>
-
 <div id='branding' class='clear-block'>
   <?php if ($admin_link): ?><div class="admin-link"><?php print $admin_link; ?></div><?php endif; ?>
   <?php if ($site_name): ?><h1 class='site-name'><?php print $site_name ?></h1><?php endif; ?>

@@ -36,6 +36,9 @@ function jake_preprocess_page(&$vars) {
     $vars['admin_link'] = l(t('Admin'), 'admin/settings/site-information', array('attributes' => array('class' => 'admin-link')));
   }
 
+  // Add body class for layout.
+  $vars['attr']['class'] .= !empty($vars['template_files']) ? ' '. end($vars['template_files']) : '';
+
   // Custom coloring and styles
   $vars['styles'] .= theme('color_css', theme_get_settings('jake'));
 
@@ -185,7 +188,7 @@ function jake_status_messages($display = NULL) {
     $first = FALSE;
 
     $output .= "<div class='messages clear-block $type $class'>";
-    $output .= "<span class='close'>". t('Hide') ."</span>";
+    $output .= l(t('Close'), $_GET['q'], array('fragment' => 'close', 'attributes' => array('class' => 'close')));
     $output .= "<div class='message-content'>";
     if (count($messages) > 1) {
       $output .= "<ul>";

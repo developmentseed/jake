@@ -2,17 +2,17 @@ name = "Jake"
 description = "Theme for MN3. Jake is a little dog."
 core = "6.x"
 engine = "phptemplate"
-base theme = "tao"
+base theme = "rubik"
 
 project = "jake"
 
 scripts[] = "js/theme.js"
 
-stylesheets[screen][] = "style.css"
-stylesheets[screen][] = "css/admin.css"
-stylesheets[screen][] = "css/forms.css"
-stylesheets[screen][] = "css/openlayers.css"
+; stylesheets[screen][] = "css/admin.css"
+; stylesheets[screen][] = "css/forms.css"
 stylesheets[print][] = "print.css"
+stylesheets[screen][] = "css/openlayers.css"
+stylesheets[screen][style] = "style.css"
 
 regions[palette] = "Palette"
 regions[page_tools] = "Page tools"
@@ -34,10 +34,11 @@ layouts[default][regions][] = "left"
 layouts[default][regions][] = "right"
 layouts[default][regions][] = "content"
 
-; Layout: Single Sidebar
-layouts[sidebar][name] = "Single Sidebar"
+; Layout: Single sidebar
+layouts[sidebar][name] = "Single sidebar"
 layouts[sidebar][description] = "Page with left sidebar."
-layouts[sidebar][template] = "sidebar"
+layouts[sidebar][template] = "layout-sidebar"
+layouts[sidebar][stylesheet] = "layout.css"
 layouts[sidebar][regions][] = "palette"
 layouts[sidebar][regions][] = "page_tools"
 layouts[sidebar][regions][] = "page_title"

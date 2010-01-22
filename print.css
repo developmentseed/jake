@@ -13,6 +13,7 @@ a {
   }
 
 br,
+div.widget,
 div.block,
 div.feeditem-labels,
 div.feeditem-links,
@@ -252,7 +253,7 @@ div.openlayers-map div.olControlPanZoomBar { display:none !important; }
     line-height:30px;
     height:30px;
 
-    background:url(images/help.png) 0% 100% repeat-x;
+    background:url(images/black90.png) 0% 100% repeat-x;
     color:#fff;
     }
 

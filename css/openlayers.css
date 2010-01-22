@@ -20,7 +20,7 @@ body.views-mode-map #canvas {
 
 body.views-mode-map #main {
   position:fixed;
-  top:110px;
+  top:100px;
   right:0px;
   bottom:0px;
   left:25%;
@@ -61,7 +61,7 @@ div.openlayers-map div.openlayers-popupbox {
 
   overflow:hidden;
   color:#ccc;
-  background:url(../images/help.png);
+  background:url(../images/black90.png);
   }
 
 div.openlayers-map div.openlayers-popupbox a { color:#fff; }
@@ -107,7 +107,7 @@ div.openlayers-map ul.popup-links { float:right; }
 div.openlayers-map div.popup-content {
   overflow:hidden;
   padding:20px;
-  background:url(../images/help.png);
+  background:url(../images/black90.png);
   }
 
   div.openlayers-map div.popup-content img { display:none; }
