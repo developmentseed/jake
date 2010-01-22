@@ -494,11 +494,18 @@ div.item-list h3 {
   font-size:11px;
   }
 
-div.item-list ul li,
-div.item-list ul li:last-child {
+div.item-list ul li {
   border-color:#ddd;
   padding:0px;
+  margin:0px;
   }
+
+  /* Last child is split out because IE7 will ignore the *entire* selector */
+  div.item-list ul li:last-child {
+    border-color:#ddd;
+    padding:0px;
+    margin:0px;
+    }
 
 .feeditem {
   position:relative;
@@ -683,12 +690,18 @@ div.navbar {
 
   div.navbar div.block { background:#f8f8f8; }
 
-div.navbar ul li,
-div.navbar ul li:last-child {
+div.navbar ul li {
   padding:0px;
   border:0px;
   position:relative;
   }
+
+  /* Last child is split out because IE7 will ignore the *entire* selector */
+  div.navbar ul li:last-child {
+    padding:0px;
+    border:0px;
+    position:relative;
+    }
 
 div.navbar li a {
   display:block;
