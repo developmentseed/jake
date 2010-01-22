@@ -43,17 +43,17 @@ designkit[image][wallpaper][imagecache] = "imagecache_scale:600x300"
 ; Background
 designkit[color][background_color][title] = "Background"
 designkit[color][background_color][description] = "Background color."
-designkit[color][background_color][default] = "#e0ecec"
+designkit[color][background_color][default] = "#d0dcdc"
 
 ; Foreground
 designkit[color][foreground_color][title] = "Foreground"
 designkit[color][foreground_color][description] = "Foreground color."
-designkit[color][foreground_color][default] = "#445566"
+designkit[color][foreground_color][default] = "#dd4422"
 
 ; Header
 designkit[color][header_color][title] = "Header"
 designkit[color][header_color][description] = "Header color."
-designkit[color][header_color][default] = "#445566"
+designkit[color][header_color][default] = "#333333"
 
 ; Context layouts =====================================================
 
