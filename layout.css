@@ -1,0 +1,7 @@
+/**
+ * Layout: Single sidebar
+ */
+body.layout-sidebar #main {
+  float:none;
+  width:auto;
+  }

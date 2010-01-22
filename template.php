@@ -109,6 +109,8 @@ function jake_views_render_field($field) {
  * Preprocessor for theme('node').
  */
 function jake_preprocess_node(&$vars) {
+  $vars['layout'] = FALSE;
+
   // Don't show node title on page views
   if (menu_get_object() === $vars['node']) {
     if (!isset($_GET['print'])) {
