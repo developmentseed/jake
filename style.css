@@ -251,6 +251,8 @@ div.simpleshare-popup {
   letter-spacing:-1px;
   }
 
+#help span.icon { display:none; }
+
 #help div.help-content { padding:20px; }
 
 #help div.help-wrapper {

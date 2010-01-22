@@ -112,6 +112,14 @@ div.openlayers-map div.popup-content {
 
   div.openlayers-map div.popup-content img { display:none; }
 
+  div.openlayers-map div.popup-content div.item-list,
+  div.openlayers-map div.popup-content div.item-list li {
+    -moz-box-shadow:none;
+    -webkit-box-shadow:none;
+    border:0px;
+    background:transparent;
+    }
+
 div.openlayers-map h2.point-title {
   font-size:15px;
   height:40px;
