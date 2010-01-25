@@ -516,7 +516,31 @@ div.item-list ul li {
 
   .feeditem-meta,
   .feeditem-title,
-  .feeditem-content { padding:0px 10px; }
+  .feeditem-content,
+  .feeditem-other { padding:0px 10px; }
+
+.feeditem-meta {
+  background:transparent url(images/hrule_dotted.png) 0% 100% repeat-x;
+  padding:5px 10px;
+  font-size:11px;
+  }
+
+  .feeditem-meta .views-field-timestamp-1 { float:right; }
+
+.feeditem-title {
+  padding-top:10px;
+  font-size:16px;
+  }
+
+.feeditem-content { overflow:hidden; }
+
+  .feeditem-twitter div.feeditem-content {
+    padding:10px;
+    font-size:16px;
+    }
+
+.feeditem-other { font-size:11px; }
+.feeditem-other label { margin-right:10px; }
 
 .feeditem-links {
   position:absolute;
@@ -557,21 +581,6 @@ div.item-list ul li {
       overflow:hidden;
       padding-left:30px;
       }
-
-.feeditem-title { font-size:16px; }
-
-.feeditem-meta {
-  background:transparent url(images/hrule_dotted.png) 0% 100% repeat-x;
-  padding:5px 10px;
-  font-size:11px;
-  margin:0px 0px 10px;
-  }
-
-  .feeditem-meta .views-field-timestamp-1 { float:right; }
-
-.feeditem-content { overflow:hidden; }
-
-  .feeditem-twitter div.feeditem-content { font-size:15px; }
 
 /**
  * Tagging UI.
@@ -654,6 +663,7 @@ body.views-mode-list div.feeditem-meta {
 
   body.views-mode-list div.feeditem-meta div.views-field-timestamp-1 { float:none; }
 
+body.views-mode-list .feeditem-other,
 body.views-mode-list .feeditem-content,
 body.views-mode-list .feeditem-title {
   padding-left:100px;
