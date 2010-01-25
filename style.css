@@ -921,7 +921,7 @@ div.views-exposed-form div.views-exposed-widget { padding:0px; border:0px; margi
   padding:20px;
   }
 
-.page-content div.view-empty li {
+.page-content div.view-empty div.item-list ul li {
   border:0px;
   display:list-item;
   list-style:square;
