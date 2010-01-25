@@ -91,9 +91,15 @@ div.openlayers-map div.popup-pager {
   height:20px;
   }
 
-div.openlayers-map ul.popup-links { float:right; }
+div.openlayers-map ul.popup-links {
+  width:92px;
+  float:right;
+  }
 
-  div.openlayers-map ul.popup-links li { padding-left:5px; }
+  div.openlayers-map ul.popup-links li { 
+    padding-left:5px;
+    border:none;
+    }
 
   div.openlayers-map ul.popup-links a {
     -moz-border-radius:10px;
