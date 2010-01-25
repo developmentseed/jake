@@ -95,14 +95,25 @@ function jake_preprocess_block(&$vars) {
 /**
  * Helper function to render views fields.
  */
-function jake_views_render_field($field) {
+function jake_views_render_field(&$field, $skip = TRUE) {
   $output = '';
-  if (!empty($field->content)) {
-    $output .= !empty($field->separator) ? $field->separator : '';
-    $output .= "<{$field->inline_html} class='views-field-{$field->class}'>";
-    $output .= !empty($field->label) ? "<label class='views-label-{$field->class};'>{$field->label}</label>" : '';
-    $output .= "<{$field->element_type} class='field-content'>{$field->content}</{$field->element_type}>";
-    $output .= "</{$field->inline_html}>";
+  if (is_array($field) && count($field) && is_object(current($field))) {
+    foreach ($field as $k => $f) {
+      $output .= jake_views_render_field($field[$k]);
+    }
+  }
+  else if (is_object($field)) {
+    // Skip rendered fields
+    if (empty($field->rendered) || !$skip) {
+      if (!empty($field->content)) {
+        $output .= !empty($field->separator) ? $field->separator : '';
+        $output .= "<{$field->inline_html} class='views-field-{$field->class}'>";
+        $output .= !empty($field->label) ? "<label class='views-label-{$field->class};'>{$field->label}</label>" : '';
+        $output .= "<{$field->element_type} class='field-content'>{$field->content}</{$field->element_type}>";
+        $output .= "</{$field->inline_html}>";
+      }
+      $field->rendered = TRUE;
+    }
   }
   return $output;
 }
