@@ -54,6 +54,9 @@ function jake_preprocess_page(&$vars) {
     $vars['mission_block'] = theme('block', $mission_block);
   }
 
+  // Truncate the slogan so it doesn't break the header
+  $vars['site_slogan'] = truncate_utf8($vars['site_slogan'], 35);
+
   // Determine stack height for fullscreen views.
   $class = array();
   if ($stackclass = context_get('theme', 'stackclass')) {
