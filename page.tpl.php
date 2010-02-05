@@ -30,7 +30,10 @@
   <div id='main'><div id='content' class='page-content clear-block'><?php print $content ?></div></div>
 
   <?php if ($right): ?>
-    <div id='right'><div class='sidebar clear-block'><?php print $right ?></div></div>
+    <div id='right'><div class='sidebar clear-block'>
+      <?php print $mission_block ?>
+      <?php print $right ?>
+    </div></div>
   <?php endif; ?>
 
 </div>

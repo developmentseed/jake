@@ -47,6 +47,13 @@ function jake_preprocess_page(&$vars) {
   // Site name
   $vars['site_name'] = theme('site_name');
 
+  // Display mission in a block
+  if (!empty($vars['mission']) && drupal_is_front_page()) {
+    $mission_block = new stdClass();
+    $mission_block->content = $vars['mission'];
+    $vars['mission_block'] = theme('block', $mission_block);
+  }
+
   // Determine stack height for fullscreen views.
   $class = array();
   if ($stackclass = context_get('theme', 'stackclass')) {
