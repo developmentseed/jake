@@ -134,6 +134,13 @@ h1.site-name { float:left; }
     background-position:0% 50%;
     }
 
+#branding div.site-slogan {
+  line-height:30px;
+  height:30px;
+  padding:15px 10px 0px;
+  float:left;
+  }
+
 #branding div.admin-link {
   line-height:30px;
   height:30px;
