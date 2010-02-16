@@ -9,7 +9,7 @@ $background_reverse = (designkit_colorhsl($background_color, 'l') < .5);
  * Logo ===============================================================
  */
 a.logo {
-  background-image:url("<?php print $logo_raw ?>");
+  background-image:url("<?php print $logo ?>");
   }
 
 /**
@@ -17,8 +17,8 @@ a.logo {
  */
 body {
   background-color:<?php print $background_color ?>;
-  <?php if ($wallpaper_path): ?>
-    background-image: url("<?php print $wallpaper_path?>");
+  <?php if ($wallpaper): ?>
+    background-image: url("<?php print $wallpaper?>");
   <?php endif; ?>
   }
 
