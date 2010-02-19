@@ -36,7 +36,7 @@ div.item-list ul li {
 
 .feeditem {
   position:relative;
-  background:transparent url(images/tools.gif) 100% 0% repeat-y;
+  background:transparent url(../images/tools.gif) 100% 0% repeat-y;
   padding:0px 30px 0px 0px;
   margin:0px;
   }
@@ -47,7 +47,7 @@ div.item-list ul li {
   .feeditem-other { padding:0px 10px; }
 
 .feeditem-meta {
-  background:transparent url(images/hrule_dotted.png) 0% 100% repeat-x;
+  background:transparent url(../images/hrule_dotted.png) 0% 100% repeat-x;
   padding:5px 10px;
   font-size:11px;
   }
@@ -97,9 +97,9 @@ div.item-list ul li {
     text-indent:-999px;
     }
 
-    div.feeditem-links a.data-node-add { background:url(images/sprite.png) -370px 0px no-repeat; }
-    div.feeditem-links a.data-node-remove { display:none; background:url(images/sprite.png) -370px -30px no-repeat; }
-    div.feeditem-links a.simpleshare { background:url(images/sprite.png) -370px -270px no-repeat; }
+    div.feeditem-links a.data-node-add { background:url(../images/sprite.png) -370px 0px no-repeat; }
+    div.feeditem-links a.data-node-remove { display:none; background:url(../images/sprite.png) -370px -30px no-repeat; }
+    div.feeditem-links a.simpleshare { background:url(../images/sprite.png) -370px -270px no-repeat; }
 
     div.feeditem-links a:hover {
       background-color:#444;
