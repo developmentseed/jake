@@ -1,0 +1,110 @@
+/**
+ * Feed item lists ====================================================
+ */
+.page-content .view-content .item-list { background:#fff; }
+
+div.item-list {
+  background:transparent;
+  border:0px;
+  -moz-box-shadow:none;
+  -webkit-box-shadow:none;
+  }
+
+div.item-list h3 {
+  background:transparent;
+  color:#999;
+  border-bottom:1px solid #ddd;
+  padding:5px 9px 4px;
+
+  text-transform:uppercase;
+  font-weight:bold;
+  font-size:11px;
+  }
+
+div.item-list ul li {
+  border-color:#ddd;
+  padding:0px;
+  margin:0px;
+  }
+
+  /* Last child is split out because IE7 will ignore the *entire* selector */
+  div.item-list ul li:last-child {
+    border-color:#ddd;
+    padding:0px;
+    margin:0px;
+    }
+
+.feeditem {
+  position:relative;
+  background:transparent url(images/tools.gif) 100% 0% repeat-y;
+  padding:0px 30px 0px 0px;
+  margin:0px;
+  }
+
+  .feeditem-meta,
+  .feeditem-title,
+  .feeditem-content,
+  .feeditem-other { padding:0px 10px; }
+
+.feeditem-meta {
+  background:transparent url(images/hrule_dotted.png) 0% 100% repeat-x;
+  padding:5px 10px;
+  font-size:11px;
+  }
+
+  .feeditem-meta .views-field-timestamp-1 { float:right; }
+
+.feeditem-title {
+  padding-top:10px;
+  font-size:16px;
+  }
+
+.feeditem-content { overflow:hidden; }
+
+  .feeditem-twitter div.feeditem-content {
+    padding:10px;
+    font-size:16px;
+    }
+
+.feeditem-other { font-size:11px; }
+.feeditem-other label { margin-right:10px; }
+
+.feeditem-links {
+  position:absolute;
+  width:30px;
+  right:0px;
+  top:0px;
+  }
+
+  .feeditem-links:hover { z-index:1000; }
+
+  .feeditem-links a {
+    -webkit-border-top-right-radius:5px;
+    -webkit-border-bottom-right-radius:5px;
+    -moz-border-radius-topright:5px;
+    -moz-border-radius-bottomright:5px;
+
+    float:none;
+    display:block;
+    width:30px;
+    height:30px;
+    line-height:30px;
+
+    font-size:11px;
+    color:#fff;
+
+    overflow:hidden;
+    text-indent:-999px;
+    }
+
+    div.feeditem-links a.data-node-add { background:url(images/sprite.png) -370px 0px no-repeat; }
+    div.feeditem-links a.data-node-remove { display:none; background:url(images/sprite.png) -370px -30px no-repeat; }
+    div.feeditem-links a.simpleshare { background:url(images/sprite.png) -370px -270px no-repeat; }
+
+    div.feeditem-links a:hover {
+      background-color:#444;
+      width:160px;
+      text-indent:0px;
+      overflow:hidden;
+      padding-left:30px;
+      }

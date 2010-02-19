@@ -11,6 +11,7 @@ scripts[] = "js/theme.js"
 stylesheets[print][] = "print.css"
 stylesheets[screen][] = "css/openlayers.css"
 stylesheets[screen][] = "style.css"
+stylesheets[screen][] = "css/feeditem_lists.css"
 
 regions[palette] = "Palette"
 regions[page_tools] = "Page tools"
