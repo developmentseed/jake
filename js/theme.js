@@ -56,13 +56,19 @@ Drupal.behaviors.jake = function (context) {
       if (!$(this).is('.palette-active')) {
         $('#palette a.palette-link').removeClass('palette-active');
         $('#palette div.block-toggle').hide();
-        var block = '#block-' + $(this).attr('href').split('#')[1];
-        $(block).show();
+        var block = $('#block-' + $(this).attr('href').split('#')[1]);
+        block.show();
         $(this).addClass('palette-active');
+        if (jQuery().pageEditor && $('form', block).pageEditor) {
+          $('form', block).pageEditor('start');
+        }
       }
       else {
         $('#palette a.palette-link').removeClass('palette-active');
         $('#palette div.block-toggle').hide();
+        if (jQuery().pageEditor && $('form', block).pageEditor) {
+          $('form', block).pageEditor('end');
+        }
       }
       return false;
     });

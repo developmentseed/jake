@@ -405,6 +405,34 @@ div.simpleshare-popup span.close {
 #palette #block-mn_core-clock small { font-size:11px; }
 
 /**
+ * Dashboard ==========================================================
+ */
+#palette div#block-spaces_dashboard-editor {
+  width:242px;
+}
+#palette form.context-editor div.buttons {
+  display:block;
+  background:transparent;
+  border:0px;
+  padding:0;
+  }
+
+#palette div.context-editor-block-layouts div.form-item {
+  display:inline;
+  padding:0px;
+  }
+
+#palette form.context-editor div.item-list {
+  display:none;
+  }
+
+#palette div.context-block-browser {
+  background:#555;
+  margin: 5px 0px;
+  padding: 5px;
+  }
+
+/**
  * Titles of various sorts ============================================
  */
 #page-header { z-index:1; }
