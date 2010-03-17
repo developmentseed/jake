@@ -45,6 +45,8 @@ Drupal.behaviors.jake = function (context) {
     });
   });
 
+  $('.mark-link > a').bind('mark.drupalMark', function() { $(this).parents('li.views-row').hide(600);});
+
   /**
    * Palette links/block management.
    */
