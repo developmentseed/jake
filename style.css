@@ -963,17 +963,20 @@ table.views-view-grid div.views-field-item-count {
   height:30px;
   text-indent:-999px;
   overflow:hidden;
+  }
 
+#page-tools li a span {
   background-image:url(images/sprite.png);
   background-position:-370px -60px;
   background-repeat:no-repeat;
+  float:left;
   }
 
   #page-tools li a:hover { background-color:#f8f8f8; }
   #page-tools li a.views-modes-active { background-color:#fff; }
 
-  #page-tools li.views-mode-list a { background-position:-370px -90px; }
-  #page-tools li.views-mode-map a { background-position:-370px -120px; }
+  #page-tools li.views-mode-list a span { background-position:-370px -90px; }
+  #page-tools li.views-mode-map a span { background-position:-370px -120px; }
 
 #page-tools div.block-views_modes ul.links { padding-right:10px; }
 #page-tools ul.formats { border-left:1px solid #ccc; }
@@ -981,14 +984,14 @@ table.views-view-grid div.views-field-item-count {
 #page-tools ul.formats a {
   text-indent:0px;
   overflow:visible;
-  padding:0px 5px 0px 30px;
+  padding:0px 5px 0px 0px;
   width:auto;
   }
 
-#page-tools li.feed_1 a,
-#page-tools li.feed_2 a { background-position:-370px -150px; }
+#page-tools li.feed_1 a span,
+#page-tools li.feed_2 a span { background-position:-370px -150px; }
 
-#page-tools li.print a { background-position:-370px -180px; }
+#page-tools li.print a span { background-position:-370px -180px; }
 
 /**
  * Pagers =============================================================
