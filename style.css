@@ -983,6 +983,7 @@ table.views-view-grid div.views-field-item-count {
 
   #page-tools li.views-mode-list a span { background-position:-370px -90px; }
   #page-tools li.views-mode-map a span { background-position:-370px -120px; }
+  #page-tools li.views-mode-trash a span { background-position:-370px -330px; }
 
 #page-tools div.block-views_modes ul.links { padding-right:10px; }
 #page-tools ul.formats { border-left:1px solid #ccc; }

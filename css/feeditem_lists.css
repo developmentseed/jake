@@ -100,7 +100,8 @@ div.item-list ul li {
     div.feeditem-links a.data-node-add { background:url(../images/sprite.png) -370px 0px no-repeat; }
     div.feeditem-links a.data-node-remove { display:none; background:url(../images/sprite.png) -370px -30px no-repeat; }
     div.feeditem-links a.simpleshare { background:url(../images/sprite.png) -370px -270px no-repeat; }
-    div.feeditem-links div.mark-link a { background:url(../images/sprite.png) -370px -270px no-repeat; }
+    div.feeditem-links div.mark-link a { background:url(../images/sprite.png) -370px -330px no-repeat; }
+    div.feeditem-links div.marked a { background:url(../images/sprite.png) -370px -360px no-repeat; }
 
     div.feeditem-links a:hover,
     div.feeditem-links div.mark-link a:hover {
