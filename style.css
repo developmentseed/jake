@@ -814,10 +814,6 @@ div.utility-block input.form-submit {
   margin-right:10px;
   float:left;
   }
-/* Avoid highlighted topic checkbox blocking clicks on Save button. */
-#stored-views-form #edit-status-wrapper {
-  float: left;
-  }
 
 div.utility-block input.form-text { width:50%; }
 
