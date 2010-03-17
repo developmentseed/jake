@@ -20,7 +20,12 @@
     <?php endif; ?>
   </div>
 
-  <div id='main'><div id='content' class='page-content clear-block'><?php print $content ?></div></div>
+  <div id='main'>
+    <div id='content' class='page-content clear-block'>
+      <?php print $content ?>
+      <?php print $content_region ?>
+    </div>
+  </div>
 
 </div>
 
