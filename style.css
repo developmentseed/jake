@@ -391,6 +391,8 @@ div.simpleshare-popup span.close {
   #palette div.widget-mn_core-user a,
   #palette div.widget-user-0 a { background-position:-370px -240px; }
 
+  #palette div.widget-spaces_dashboard-editor a { background-position:-370px -390px; }
+
   #palette div.widget-toggle a:hover { background-color:#222; }
   #palette div.widget-toggle a.palette-active { background-color:#fff; }
 
