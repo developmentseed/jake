@@ -610,7 +610,8 @@ body.views-mode-list .feeditem-title {
  * Sidebar lists ======================================================
  */
 div.navbar,
-div.sidebar {
+div.sidebar,
+div#context-block-region-content {
   position:relative;
   font-size:11px;
   }
@@ -716,6 +717,7 @@ div.navbar div.context-links a:hover { background:#fff; }
 div.sidebar { padding:10px 10px 10px 0px; }
 
 .page-content > form,
+#context-block-region-content .block,
 div.sidebar .block,
 #palette .block-toggle {
   background:#f8f8f8;
@@ -725,6 +727,7 @@ div.sidebar .block,
   .page-content > form,
   div.admin-panel,
   div.sidebar .block .block-content,
+  #context-block-region-content .block .block-content,
   #palette .block-toggle .block-content { padding:10px; }
 
   #palette div.block-toggle {
@@ -740,7 +743,8 @@ div.sidebar .block,
     }
 
 #palette h2.block-title,
-div.sidebar h2.block-title {
+div.sidebar h2.block-title,
+#context-block-region-content h2.block-title {
   -moz-border-radius:5px 5px 0px 0px;
   -webkit-border-top-left-radius:5px;
   -webkit-border-top-right-radius:5px;
