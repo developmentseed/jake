@@ -612,9 +612,12 @@ body.views-mode-list .feeditem-title {
  * Sidebar lists ======================================================
  */
 div.navbar,
-div.sidebar,
-div.page-content {
+div.sidebar {
   position:relative;
+  font-size:11px;
+  }
+
+div.page-content {
   font-size:11px;
   }
 
