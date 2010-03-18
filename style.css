@@ -824,7 +824,7 @@ input#edit-search { width:120px; }
  */
 /* I hate this */
 div.sidebar div.view-filters,
-div.page-content div.view-filters { display:none; }
+div.page-content div.block div.view-filters { display:none; }
 
 div.view-filters { margin:0px 0px 10px; }
 
