@@ -111,3 +111,13 @@ div.item-list ul li {
       overflow:hidden;
       padding-left:30px;
       }
+  
+.views-mode-list .views-field-timestamp-1 span.field-content{
+  display: block;
+  float: left;
+  clear: left;
+}
+.views-mode-list .views-field-timestamp-1 label{
+  display: block;
+  float: left;
+}
