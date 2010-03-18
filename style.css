@@ -823,7 +823,8 @@ input#edit-search { width:120px; }
  * Views ==============================================================
  */
 /* I hate this */
-div.sidebar div.view-filters { display:none; }
+div.sidebar div.view-filters,
+div.page-content div.view-filters { display:none; }
 
 div.view-filters { margin:0px 0px 10px; }
 
