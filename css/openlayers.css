@@ -145,9 +145,12 @@ body.views-mode-map div.openlayers-map div.openlayers-popupbox {
   width:40%;
   }
 
-/* In sidebar */
-div.sidebar div.openlayers-map div.popup { bottom:0px; }
-div.sidebar div.openlayers-map div.point-content { height:40px; }
+/* In sidebar or content-region */
+div.sidebar div.openlayers-map div.popup,
+#content-region-wrapper div.openlayers-map div.popup { bottom:0px; }
+
+div.sidebar div.openlayers-map div.point-content,
+#content-region-wrapper div.openlayers-map div.point-content { height:40px; }
 
 /**
  * Permalink.
