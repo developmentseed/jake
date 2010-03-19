@@ -19,6 +19,11 @@ body { background-color:#d0dcdc; }
   -webkit-box-shadow:#9ca5a5 0px 1px 3px;
   }
 
+  .sidebar .block .view-content .openlayers-popupbox .item-list {
+    -moz-box-shadow:none;
+    -webkit-box-shadow:none;
+    }
+
 #branding {
   background-color:#333333;
   border-color:#2d2d2d;
