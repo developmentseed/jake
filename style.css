@@ -581,39 +581,6 @@ div.data-taxonomy-tags a.data-taxonomy-edit {
     }
 
 /**
- * List view mode.
- */
-body.views-mode-list div.feeditem-meta {
-  position:absolute;
-  left:10px;
-  top:10px;
-  border:0px;
-  padding:0px;
-  background:transparent;
-  }
-
-  body.views-mode-list div.feeditem-meta div.views-field-timestamp-1 { float:none; }
-
-body.views-mode-list .feeditem-other,
-body.views-mode-list .feeditem-content,
-body.views-mode-list .feeditem-title {
-  padding-left:100px;
-  height:20px;
-  overflow:hidden;
-  white-space:nowrap;
-  }
-
-  body.views-mode-list .feeditem-title { padding-top:10px; }
-  body.views-mode-list .feeditem-content { padding-bottom:10px; }
-  body.views-mode-list .feeditem-content img { display:none; }
-
-  /* Don't trim tweets */
-  body.views-mode-list div.feeditem-twitter div.feeditem-content {
-    white-space:normal;
-    height:auto;
-    }
-
-/**
  * Sidebar lists ======================================================
  */
 div.navbar,

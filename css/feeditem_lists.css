@@ -7,6 +7,10 @@
   margin-bottom:10px;
   }
 
+.sidebar .openlayers-popupbox .item-list {
+  margin-bottom:0px;
+  }
+
 div.item-list {
   background:transparent;
   border:0px;
@@ -58,11 +62,6 @@ div.item-list ul li {
   font-size:11px;
   }
 
-.block .feeditem-meta {
-  float:right;
-  padding:10px;
-  }
-
   #content-wrapper .feeditem-meta {
     background:transparent url(../images/hrule_dotted.png) 0% 100% repeat-x;
     }
@@ -72,17 +71,6 @@ div.item-list ul li {
 .feeditem-title {
   padding-top:10px;
   font-size:16px;
-  }
-
-.block .feeditem-title {
-  font-size:14px;
-  float:left;
-  padding: 10px 0px 10px 10px;
-  }
-
-.block .feeditem-feed {
-  float:left;
-  padding: 10px 10px 10px 10px;
   }
 
 .feeditem-content { overflow:hidden; }
@@ -147,3 +135,47 @@ div.item-list ul li {
   display: block;
   float: left;
 }
+
+/**
+ * List view mode.
+ */
+body.views-mode-list div.feeditem-meta,
+div.block div.feeditem-meta {
+  position:absolute;
+  left:10px;
+  top:10px;
+  border:0px;
+  padding:0px;
+  background:transparent;
+  }
+
+  body.views-mode-list div.feeditem-meta div.views-field-timestamp-1,
+  div.block div.feeditem-meta div.views-field-timestamp-1 { float:none; }
+
+body.views-mode-list .feeditem-other,
+body.views-mode-list .feeditem-content,
+body.views-mode-list .feeditem-title,
+div.block .feeditem-other,
+div.block .feeditem-content,
+div.block .feeditem-title {
+  padding-left:100px;
+  height:20px;
+  overflow:hidden;
+  white-space:nowrap;
+  }
+
+  body.views-mode-list .feeditem-title,
+  div.block .feeditem-title { padding-top:10px; }
+
+  body.views-mode-list .feeditem-content,
+  div.block .feeditem-content { padding-bottom:10px; }
+
+  body.views-mode-list .feeditem-content img,
+  div.block .feeditem-content img { display:none; }
+
+  /* Don't trim tweets */
+  body.views-mode-list div.feeditem-twitter div.feeditem-content,
+  div.block div.feeditem-twitter div.feeditem-content {
+    white-space:normal;
+    height:auto;
+    }
