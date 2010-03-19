@@ -50,22 +50,25 @@ Drupal.behaviors.jake = function (context) {
   /**
    * Palette links/block management.
    */
-  $('#palette a.palette-link:not(.processed)').each(function() {
+  $('#palette div.block:not(.processed)').each(function() {
     $(this).addClass('processed');
-    $(this).click(function() {
-      if (!$(this).is('.palette-active')) {
-        $('#palette a.palette-link').removeClass('palette-active');
-        $('#palette div.block-toggle').hide();
-        var block = $('#block-' + $(this).attr('href').split('#')[1]);
-        block.show();
-        $(this).addClass('palette-active');
+    $('.block-title', this).click(function() {
+      var block = $(this).parents('div.block');
+      if (!$(block).is('.palette-active')) {
+        // Reset states
+        $('#palette .palette-active').removeClass('palette-active');
+        $('#palette .block-toggle .block-content').hide();
+
+        // Show the clicked block
+        $('.block-content', block).show();
+        $(block).addClass('palette-active');
         if (jQuery().pageEditor && $('form', block).pageEditor) {
           $('form', block).pageEditor('start');
         }
       }
       else {
-        $('#palette a.palette-link').removeClass('palette-active');
-        $('#palette div.block-toggle').hide();
+        $('#palette .palette-active').removeClass('palette-active');
+        $('#palette .block-toggle .block-content').hide();
         if (jQuery().pageEditor && $('form', block).pageEditor) {
           $('form', block).pageEditor('end');
         }
@@ -73,4 +76,4 @@ Drupal.behaviors.jake = function (context) {
       return false;
     });
   });
-}
+};

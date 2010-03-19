@@ -349,6 +349,9 @@ div.simpleshare-popup span.close {
  * Palette =============================================================
  */
 #palette {
+  padding:5px;
+  height:30px;
+
   color:#ccc;
   position:fixed;
   bottom:0px;
@@ -362,44 +365,64 @@ div.simpleshare-popup span.close {
   background:url(images/black90.png);
   }
 
-  #palette a { color:#fff; }
+#palette a { color:#fff; }
 
-  #palette * { border-color:#111; }
+#palette * { border-color:#111; }
 
-#palette div.widget {
-  line-height:30px;
-  padding:5px;
+#palette div.block {
+  background:transparent;
   float:left;
+  margin:0px;
+  position:relative;
   }
 
-#palette div.palette-links ul.links { float:left; }
+#palette div.widget { padding:0px 5px; }
 
-#palette div.palette-links ul.links span { padding:0px 10px; }
-
-#palette div.widget-toggle a {
+#palette .block-title {
   display:block;
-  width:30px;
+  width:auto;
+  padding:0px 5px 0px 30px;
+  margin-right:5px;
+  line-height:30px;
   height:30px;
-  text-indent:-999px;
-  overflow:hidden;
+
+  font-size:11px;
+  color:#fff;
+  cursor:pointer;
 
   -moz-border-radius:3px;
   -webkit-border-radius:3px;
 
+  background-color:#222;
   background-image:url(images/sprite.png);
   background-repeat:no-repeat;
   background-position:30px 30px;
   }
 
-  #palette div.widget-data_node-feeds_data_syndication a { background-position:-370px 0px; }
+  #palette .block-title a:hover { background-color:#222; }
 
-  #palette div.widget-mn_core-user a,
-  #palette div.widget-user-0 a { background-position:-370px -240px; }
+  #palette .palette-active .block-title {
+    background-color:#fff;
+    color:#222;
+    }
 
-  #palette div.widget-spaces_dashboard-editor a { background-position:-370px -390px; }
+  #palette #block-data_node-feeds_data_syndication .block-title { background-position:-370px 0px; }
 
-  #palette div.widget-toggle a:hover { background-color:#222; }
-  #palette div.widget-toggle a.palette-active { background-color:#fff; }
+  #palette #block-mn_core-user .block-title,
+  #palette #block-user-0 .block-title { background-position:-370px -240px; }
+
+  #palette #block-spaces_dashboard-editor .block-title { background-position:-370px -390px; }
+
+#palette .block-toggle .block-content {
+  position:absolute;
+  bottom:25px;
+  left:50%;
+  width:240px;
+  padding:10px 10px 25px;
+  margin:0px 0px 0px -130px;
+  display:none;
+  background:url(images/palette.png) 50% 100% no-repeat;
+  }
 
 #palette input.form-submit {
   color:#fff;
@@ -407,16 +430,17 @@ div.simpleshare-popup span.close {
   }
 
 /* Sitewide clock */
-#palette #block-mn_core-clock { line-height:15px; }
+#palette #block-mn_core-clock {
+  font-size:11px;
+  line-height:15px;
+  }
+
 #palette #block-mn_core-clock * { display:block; }
-#palette #block-mn_core-clock small { font-size:11px; }
+#palette #block-mn_core-clock small { font-size:9px; }
 
 /**
  * Dashboard ==========================================================
  */
-#palette div#block-spaces_dashboard-editor {
-  width:242px;
-}
 #palette form.context-editor div.buttons {
   display:block;
   background:transparent;
@@ -434,8 +458,7 @@ div.simpleshare-popup span.close {
   }
 
 #palette div.context-block-browser {
-  background:#555;
-  margin: 5px 0px;
+  background:#333;
   padding: 5px;
   }
 
@@ -704,22 +727,8 @@ div.sidebar .block,
   .page-content > form,
   div.admin-panel,
   div.sidebar .block .block-content,
-  div.page-content .block .block-content,
-  #palette .block-toggle .block-content { padding:10px; }
+  div.page-content .block .block-content { padding:10px; }
 
-  #palette div.block-toggle {
-    position:absolute;
-    bottom:45px;
-    right:0px;
-    width:240px;
-
-    display:none;
-
-    margin:0px;
-    background:url(images/black90.png);
-    }
-
-#palette h2.block-title,
 div.sidebar h2.block-title,
 div.page-content h2.block-title {
   -moz-border-radius:5px 5px 0px 0px;
@@ -732,12 +741,6 @@ div.page-content h2.block-title {
   font-size:11px;
   text-transform:uppercase;
   }
-
-  #palette h2.block-title {
-    border-color:#111;
-    background:#222;
-    color:#fff;
-    }
 
 /**
  * Special blocks & forms =============================================

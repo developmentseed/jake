@@ -75,14 +75,7 @@ function jake_preprocess_page(&$vars) {
  */
 function jake_preprocess_block(&$vars) {
   if ($vars['block']->region === 'palette') {
-    if (!empty($vars['title'])) {
-      $toggler = l($vars['title'], $_GET['q'], array('fragment' => "{$vars['block']->module}-{$vars['block']->delta}", 'attributes' => array('class' => 'palette-link', 'title' => $vars['block']->subject)));
-      $vars['pre_object'] = "<div class='widget widget-toggle widget-{$vars['block']->module}-{$vars['block']->delta}'>{$toggler}</div>";
-      $vars['attr']['class'] .= ' block-toggle';
-    }
-    else {
-      $vars['attr']['class'] .= ' widget';
-    }
+    $vars['attr']['class'] .= !empty($vars['title']) ? ' block-toggle' : ' widget';
   }
   $classgroups = array(
     'utility-block' => array(

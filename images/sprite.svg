@@ -15,7 +15,7 @@
    sodipodi:version="0.32"
    inkscape:version="0.46"
    version="1.0"
-   inkscape:export-filename="/Users/diggersf/www/mn_widgets/profiles/managingnews/themes/jake/images/sprite.png"
+   inkscape:export-filename="/home/devseed/www/mn/profiles/managingnews/themes/jake/images/sprite.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90"
    sodipodi:docname="sprite.svg"
@@ -91,8 +91,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1"
-     inkscape:cx="375.03545"
-     inkscape:cy="194.70403"
+     inkscape:cx="373.78963"
+     inkscape:cy="195.89835"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -627,15 +627,11 @@
       <g
          transform="translate(11,0)"
          id="g3405">
-        <rect
-           rx="1"
-           ry="1"
-           y="395"
-           x="375"
-           height="9"
-           width="9"
-           id="rect3407"
-           style="opacity:1;fill:#808080;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0;stroke-linecap:square;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:0;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+        <path
+           style="opacity:1;fill:#a0a0a0;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0;stroke-linecap:square;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:0;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+           d="M 386 395 C 385.446 395 385 395.446 385 396 L 385 403 C 385 403.554 385.446 404 386 404 L 393 404 C 393.554 404 394 403.554 394 403 L 394 396 C 394 395.446 393.554 395 393 395 L 386 395 z M 386.5 398 L 392.5 398 C 392.777 398 393 398.223 393 398.5 L 393 402.5 C 393 402.777 392.777 403 392.5 403 L 386.5 403 C 386.223 403 386 402.777 386 402.5 L 386 398.5 C 386 398.223 386.223 398 386.5 398 z "
+           transform="translate(-10,0)"
+           id="rect3407" />
         <rect
            rx="0.5"
            ry="0.5"
@@ -644,7 +640,7 @@
            height="5"
            width="7"
            id="rect3409"
-           style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0;stroke-linecap:square;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:0;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+           style="opacity:0.25000000000000000;fill:#c0c0c0;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;color:#000000" />
       </g>
     </g>
     <g
@@ -652,51 +648,13 @@
        transform="translate(-1,-1)">
       <g
          id="g3411"
-         transform="translate(11,11)">
-        <rect
-           style="opacity:1;fill:#808080;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0;stroke-linecap:square;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:0;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-           id="rect3413"
-           width="9"
-           height="9"
-           x="375"
-           y="395"
-           ry="1"
-           rx="1" />
-        <rect
-           style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0;stroke-linecap:square;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:0;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-           id="rect3415"
-           width="7"
-           height="5"
-           x="376"
-           y="398"
-           ry="0.5"
-           rx="0.5" />
-      </g>
+         transform="translate(11,11)" />
     </g>
     <g
        id="g3971">
       <g
          transform="translate(0,10)"
-         id="g3417">
-        <rect
-           rx="1"
-           ry="1"
-           y="395"
-           x="375"
-           height="9"
-           width="9"
-           id="rect3419"
-           style="opacity:1;fill:#808080;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0;stroke-linecap:square;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:0;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-        <rect
-           rx="0.5"
-           ry="0.5"
-           y="398"
-           x="376"
-           height="5"
-           width="7"
-           id="rect3421"
-           style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0;stroke-linecap:square;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:0;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-      </g>
+         id="g3417" />
     </g>
     <g
        id="g3936">
@@ -708,15 +666,59 @@
          height="9"
          width="9"
          id="rect3934"
-         style="opacity:1;fill:#f4f4f4;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0;stroke-linecap:square;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:0;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+         style="opacity:0.25000000000000000;fill:#c0c0c0;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;color:#000000" />
       <rect
-         style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#c0c0c0;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:0;stroke-dasharray:1, 2;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#a0a0a0;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:0;stroke-dasharray:1, 2;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
          id="rect3423"
          width="8"
          height="8"
          x="375.5"
          y="395.49997"
          ry="0.5" />
+    </g>
+    <g
+       transform="translate(-11,10)"
+       id="g3264">
+      <g
+         id="g3266"
+         transform="translate(11,0)">
+        <path
+           id="path3268"
+           transform="translate(-10,0)"
+           d="M 386,395 C 385.446,395 385,395.446 385,396 L 385,403 C 385,403.554 385.446,404 386,404 L 393,404 C 393.554,404 394,403.554 394,403 L 394,396 C 394,395.446 393.554,395 393,395 L 386,395 z M 386.5,398 L 392.5,398 C 392.777,398 393,398.223 393,398.5 L 393,402.5 C 393,402.777 392.777,403 392.5,403 L 386.5,403 C 386.223,403 386,402.777 386,402.5 L 386,398.5 C 386,398.223 386.223,398 386.5,398 z"
+           style="opacity:1;fill:#a0a0a0;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0;stroke-linecap:square;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:0;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+        <rect
+           style="opacity:0.25;fill:#c0c0c0;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+           id="rect3270"
+           width="7"
+           height="5"
+           x="376"
+           y="398"
+           ry="0.5"
+           rx="0.5" />
+      </g>
+    </g>
+    <g
+       id="g3272"
+       transform="translate(-1,10)">
+      <g
+         transform="translate(11,0)"
+         id="g3274">
+        <path
+           style="opacity:1;fill:#a0a0a0;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0;stroke-linecap:square;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:0;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+           d="M 386,395 C 385.446,395 385,395.446 385,396 L 385,403 C 385,403.554 385.446,404 386,404 L 393,404 C 393.554,404 394,403.554 394,403 L 394,396 C 394,395.446 393.554,395 393,395 L 386,395 z M 386.5,398 L 392.5,398 C 392.777,398 393,398.223 393,398.5 L 393,402.5 C 393,402.777 392.777,403 392.5,403 L 386.5,403 C 386.223,403 386,402.777 386,402.5 L 386,398.5 C 386,398.223 386.223,398 386.5,398 z"
+           transform="translate(-10,0)"
+           id="path3276" />
+        <rect
+           rx="0.5"
+           ry="0.5"
+           y="398"
+           x="376"
+           height="5"
+           width="7"
+           id="rect3278"
+           style="opacity:0.25;fill:#c0c0c0;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+      </g>
     </g>
   </g>
 </svg>
