@@ -1,7 +1,8 @@
 /**
  * Feed item lists ====================================================
  */
-.page-content .view-content .item-list { background:#fff; }
+.page-content .view-content .item-list,
+.sidebar .view-content .item-list { background:#fff; }
 
 div.item-list {
   background:transparent;
@@ -36,10 +37,13 @@ div.item-list ul li {
 
 .feeditem {
   position:relative;
-  background:transparent url(../images/tools.gif) 100% 0% repeat-y;
-  padding:0px 30px 0px 0px;
   margin:0px;
   }
+
+  #content-wrapper .feeditem {
+    background:transparent url(../images/tools.gif) 100% 0% repeat-y;
+    padding:0px 30px 0px 0px;
+    }
 
   .feeditem-meta,
   .feeditem-title,
@@ -47,16 +51,35 @@ div.item-list ul li {
   .feeditem-other { padding:0px 10px; }
 
 .feeditem-meta {
-  background:transparent url(../images/hrule_dotted.png) 0% 100% repeat-x;
   padding:5px 10px;
   font-size:11px;
   }
+
+.block .feeditem-meta {
+  float:right;
+  padding:10px;
+  }
+
+  #content-wrapper .feeditem-meta {
+    background:transparent url(../images/hrule_dotted.png) 0% 100% repeat-x;
+    }
 
   .feeditem-meta .views-field-timestamp-1 { float:right; }
 
 .feeditem-title {
   padding-top:10px;
   font-size:16px;
+  }
+
+.block .feeditem-title {
+  font-size:14px;
+  float:left;
+  padding: 10px 0px 10px 10px;
+  }
+
+.block .feeditem-feed {
+  float:left;
+  padding: 10px 10px 10px 10px;
   }
 
 .feeditem-content { overflow:hidden; }
@@ -111,7 +134,7 @@ div.item-list ul li {
       overflow:hidden;
       padding-left:30px;
       }
-  
+
 .views-mode-list .views-field-timestamp-1 span.field-content{
   display: block;
   float: left;

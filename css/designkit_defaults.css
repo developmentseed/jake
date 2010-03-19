@@ -8,6 +8,7 @@ body { background-color:#d0dcdc; }
 
 .growl .messages,
 .sidebar .block,
+.sidebar .block .view-content .item-list,
 .page-content .node,
 .page-content .block,
 .page-content div.pager,
