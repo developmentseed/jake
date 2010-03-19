@@ -2,7 +2,10 @@
  * Feed item lists ====================================================
  */
 .page-content .view-content .item-list,
-.sidebar .view-content .item-list { background:#fff; }
+.sidebar .view-content .item-list {
+  background:#fff;
+  margin-bottom:10px;
+  }
 
 div.item-list {
   background:transparent;
