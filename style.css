@@ -1159,3 +1159,27 @@ div.not-found {
   border:5px solid #fff;
   padding:20px 20px;
   }
+
+/**
+ * Boxes ==============================================================
+ */
+.block-boxes { position:relative; }
+
+.boxes-box-controls {
+  position:absolute;
+  top:5px;
+  right:5px;
+  }
+
+.boxes-box-controls a {
+  text-indent:-999px;
+  overflow:hidden;
+
+  width:20px;
+  height:20px;
+  padding:0px;
+  background:#fff;
+  }
+
+  .boxes-box-controls .edit a { background:url(images/sprite.png) no-repeat; }
+  .boxes-box-controls .cancel a { background:url(images/sprite.png) -20px 0px no-repeat; }
