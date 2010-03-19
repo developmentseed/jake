@@ -62,11 +62,6 @@ div.item-list ul li {
   font-size:11px;
   }
 
-.block .feeditem-meta {
-  float:right;
-  padding:10px;
-  }
-
   #content-wrapper .feeditem-meta {
     background:transparent url(../images/hrule_dotted.png) 0% 100% repeat-x;
     }
@@ -76,17 +71,6 @@ div.item-list ul li {
 .feeditem-title {
   padding-top:10px;
   font-size:16px;
-  }
-
-.block .feeditem-title {
-  font-size:14px;
-  float:left;
-  padding: 10px 0px 10px 10px;
-  }
-
-.block .feeditem-feed {
-  float:left;
-  padding: 10px 10px 10px 10px;
   }
 
 .feeditem-content { overflow:hidden; }
