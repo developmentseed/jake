@@ -7,7 +7,8 @@
   margin-bottom:10px;
   }
 
-.sidebar .openlayers-popupbox .item-list {
+.sidebar .openlayers-popupbox .item-list,
+#content-region-wrapper .openlayers-popupbox .item-list {
   margin-bottom:0px;
   }
 

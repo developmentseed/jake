@@ -40,7 +40,7 @@ div.block div.block-content {
 .page-content div.view-empty,
 .page-content .view-content .item-list,
 .page-content .view-content table,
-.page-content > form {
+.page-content #content-wrapper > form {
   -moz-box-shadow:#999 0px 0px 3px;
   -webkit-box-shadow:#999 0px 1px 3px;
   }
@@ -53,7 +53,7 @@ div.block div.block-content {
 .page-content div.view-empty,
 .page-content .view-content .item-list,
 .page-content .view-content table,
-.page-content > form {
+.page-content #content-wrapper > form {
   border:0px;
   -moz-border-radius:5px;
   -webkit-border-radius:5px;
@@ -716,7 +716,7 @@ div.navbar div.context-links a:hover { background:#fff; }
  */
 div.sidebar { padding:10px 10px 10px 0px; }
 
-.page-content > form,
+.page-content #content-wrapper > form,
 div.page-content .block,
 div.sidebar .block,
 #palette .block-toggle {
@@ -724,7 +724,7 @@ div.sidebar .block,
   margin:0px 0px 10px;
   }
 
-  .page-content > form,
+  .page-content #content-wrapper > form,
   div.admin-panel,
   div.sidebar .block .block-content,
   div.page-content .block .block-content { padding:10px; }
