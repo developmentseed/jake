@@ -26,11 +26,10 @@
     <div class='growl'><?php print $messages; ?></div>
   <?php endif; ?>
 
-
   <div id='main'>
     <div id='content' class='page-content clear-block'>
-      <?php print $content ?>
-      <?php print $content_region ?>
+      <div id='content-wrapper'><?php print $content ?></div>
+      <div id='content-region-wrapper'><?php print $content_region ?></div>
     </div>
   </div>
 
