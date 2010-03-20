@@ -194,6 +194,9 @@ body#widget .feeditem-title {
 /**
  * Widget specific.
  */
+
+body#widget div.view-filters { display:none; }
+
 body#widget div.item-list h3 {
   padding-left:5px;
   }
