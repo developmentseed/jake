@@ -138,10 +138,12 @@ div.item-list ul li {
 }
 
 /**
- * List view mode.
+ * Condensed items.
+ * For list view mode, dashboard listing blocks, and widgets.
  */
 body.views-mode-list div.feeditem-meta,
-div.block div.feeditem-meta {
+div.block div.feeditem-meta,
+body#widget div.feeditem-meta {
   position:absolute;
   left:10px;
   top:10px;
@@ -151,14 +153,18 @@ div.block div.feeditem-meta {
   }
 
   body.views-mode-list div.feeditem-meta div.views-field-timestamp-1,
-  div.block div.feeditem-meta div.views-field-timestamp-1 { float:none; }
+  div.block div.feeditem-meta div.views-field-timestamp-1,
+  body#widget div.feeditem-meta div.views-field-timestamp-1 { float:none; }
 
 body.views-mode-list .feeditem-other,
 body.views-mode-list .feeditem-content,
 body.views-mode-list .feeditem-title,
 div.block .feeditem-other,
 div.block .feeditem-content,
-div.block .feeditem-title {
+div.block .feeditem-title,
+body#widget .feeditem-other,
+body#widget .feeditem-content,
+body#widget .feeditem-title {
   padding-left:100px;
   height:20px;
   overflow:hidden;
@@ -166,17 +172,52 @@ div.block .feeditem-title {
   }
 
   body.views-mode-list .feeditem-title,
-  div.block .feeditem-title { padding-top:10px; }
+  div.block .feeditem-title,
+  body#widget .feeditem-title { padding-top:10px; }
 
   body.views-mode-list .feeditem-content,
-  div.block .feeditem-content { padding-bottom:10px; }
+  div.block .feeditem-content,
+  body#widget .feeditem-content { padding-bottom:10px; }
 
   body.views-mode-list .feeditem-content img,
-  div.block .feeditem-content img { display:none; }
+  div.block .feeditem-content img,
+  body#widget .feeditem-content img { display:none; }
 
   /* Don't trim tweets */
   body.views-mode-list div.feeditem-twitter div.feeditem-content,
-  div.block div.feeditem-twitter div.feeditem-content {
+  div.block div.feeditem-twitter div.feeditem-content,
+  body#widget div.feeditem-twitter div.feeditem-content {
     white-space:normal;
     height:auto;
     }
+
+/**
+ * Widget specific.
+ */
+body#widget div.item-list h3 {
+  padding-left:5px;
+  }
+
+body#widget div.feeditem-meta {
+  top:5px;
+  left:5px;
+  }
+
+  body#widget div.feeditem-meta .views-field-title-1 {
+    padding-left:45px;
+    }
+
+body#widget .feeditem-other,
+body#widget .feeditem-content,
+body#widget .feeditem-title {
+  padding-left:50px;
+  }
+
+body#widget .feeditem-title {
+  padding-top:5px;
+  font-size:12px;
+  }
+
+body#widget .feeditem-content {
+  padding-bottom:5px;
+  }
