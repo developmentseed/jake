@@ -260,7 +260,7 @@ function jake_status_messages($display = NULL) {
  */
 function jake_site_name() {
   $image = variable_get('designkit_image', array());
-  $name = check_plain(variable_get('site_name', 'Drupal'));
+  $name = variable_get('site_name', 'Drupal');
   if (!empty($image['logo'])) {
     return l(t($name), '<front>', array('attributes' => array('class' => 'logo')));
   }
