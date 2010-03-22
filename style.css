@@ -412,6 +412,7 @@ div.simpleshare-popup span.close {
   #palette #block-user-0 .block-title { background-position:-370px -240px; }
 
   #palette #block-spaces_dashboard-editor .block-title { background-position:-370px -390px; }
+  #palette #block-mn_widgets-embed .block-title { background-position:-370px -300px; }
 
 #palette .block-toggle .block-content {
   position:absolute;
@@ -423,6 +424,11 @@ div.simpleshare-popup span.close {
   display:none;
   background:url(images/palette.png) 50% 100% no-repeat;
   }
+
+  #palette .block-mn_widgets .block-content {
+    width:300px;
+    margin-left:-160px;
+    }
 
 #palette input.form-submit {
   color:#fff;
