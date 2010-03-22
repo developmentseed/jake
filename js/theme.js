@@ -61,6 +61,13 @@ Drupal.behaviors.jake = function (context) {
 
         // Show the clicked block
         $('.block-content', block).show();
+
+        // Lazy load the widget preview
+        if (block.attr('id') == 'block-mn_widgets-embed' && !Drupal.settings.widgetLoaded) {
+          block.find("#mn_widgets_preview").html(Drupal.settings.mn_widgets_preview);
+          Drupal.settings.widgetLoaded = true;
+        }
+
         $(block).addClass('palette-active');
         if (jQuery().pageEditor && $('form', block).pageEditor) {
           $('form', block).pageEditor('start');
