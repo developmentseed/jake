@@ -47,6 +47,12 @@ Drupal.behaviors.jake = function (context) {
 
   $('.mark-link > a').bind('mark.drupalMark', function() { $(this).parents('li.views-row').hide(600);});
 
+  // Change the z-index of the l10n client when it is expanded
+  Drupal.jake.checkl10n();
+  $('#l10n-client .toggle').click(function() {
+    Drupal.jake.checkl10n();
+  });
+
   /**
    * Palette links/block management.
    */
@@ -84,3 +90,15 @@ Drupal.behaviors.jake = function (context) {
     });
   });
 };
+
+Drupal.jake = {}
+Drupal.jake.checkl10n = function() {
+  client = $('#l10n-client');
+  if (client.hasClass('hidden')) {
+    index = 100;
+  }
+  else {
+    index = 2000;
+  }
+  client.css('z-index', index);
+}

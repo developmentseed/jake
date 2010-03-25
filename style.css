@@ -1142,6 +1142,17 @@ div.not-found {
   }
 
 /**
+ * Localization client ================================================
+ */
+#l10n-client .labels .toggle {
+  right:auto;
+  }
+
+#l10n-client .labels h2 {
+  padding-left:35px;
+  }
+
+/**
  * Boxes ==============================================================
  */
 .block-boxes { position:relative; }
