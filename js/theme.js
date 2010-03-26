@@ -58,12 +58,22 @@ Drupal.behaviors.jake = function (context) {
     $('#context-ui-editor div.categories').hide();
     $('#context-ui-editor div.category').show();
   }
+  $('.boxes-box-controls .links li.edit').children('a:not(.jake-processed)').each(function() {
+    $(this).addClass('jake-processed');
+    $(this).click(function() {
+      var block = $('#palette div.block');
+      if (!$('body').hasClass('context-editing')) {
+        $('#block-spaces_dashboard-editor .block-title').click();
+      }
+    });
+  });
 
   /**
    * Palette links/block management.
    */
   $('#palette div.block:not(.processed)').each(function() {
     $(this).addClass('processed');
+    var dashboardTitleText;
     $('.block-title', this).click(function() {
       var block = $(this).parents('div.block');
       if (!$(block).is('.palette-active')) {
@@ -82,14 +92,18 @@ Drupal.behaviors.jake = function (context) {
 
         $(block).addClass('palette-active');
         if (jQuery().pageEditor && $('form', block).pageEditor) {
+          dashboardTitleText = $(this).text();
           $('form', block).pageEditor('start');
+          $(this).text($('form #edit-cancel', block).val());
         }
       }
       else {
         $('#palette .palette-active').removeClass('palette-active');
         $('#palette .block-toggle .block-content').hide();
         if (jQuery().pageEditor && $('form', block).pageEditor) {
+          $(this).text(dashboardTitleText);
           $('form', block).pageEditor('end');
+          $('form #edit-cancel', block).click();
         }
       }
       return false;
