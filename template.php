@@ -54,6 +54,13 @@ function jake_preprocess_page(&$vars) {
     $vars['mission_block'] = theme('block', $mission_block);
   }
 
+  // Don't show title on dashboard == frontpage.
+  $context = context_get('context');
+  if (isset($context['mn-dashboard'])) {
+    $vars['title'] = '';
+    $vars['page_title'] = '';
+  }
+
   // Truncate the slogan so it doesn't break the header
   $vars['site_slogan'] = truncate_utf8($vars['site_slogan'], 35);
 
