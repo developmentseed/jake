@@ -105,6 +105,15 @@ function jake_preprocess_context_block_editable_region(&$vars) {
 }
 
 /**
+ * Preprocessor for theme('context_block_browser').
+ */
+function jake_preprocess_context_block_browser(&$vars) {
+  if (count($vars['categories']['#options']) == 2) {
+    unset($vars['categories']['#options'][0]);
+  }
+}
+
+/**
  * Helper function to render views fields.
  */
 function jake_views_render_field(&$field, $skip = TRUE) {

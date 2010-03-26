@@ -53,6 +53,12 @@ Drupal.behaviors.jake = function (context) {
     Drupal.jake.checkl10n();
   });
 
+  // Hide the context ui category selector if there is only one option
+  if ($('#context-ui-editor select.context-block-browser-categories option').size() == 1) {
+    $('#context-ui-editor div.categories').hide();
+    $('#context-ui-editor div.category').show();
+  }
+
   /**
    * Palette links/block management.
    */
