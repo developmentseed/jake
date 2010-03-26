@@ -1170,7 +1170,7 @@ div.not-found {
   right:5px;
   }
 
-.boxes-box-controls a {
+.boxes-box-controls .edit a {
   text-indent:-999px;
   overflow:hidden;
 
@@ -1178,7 +1178,5 @@ div.not-found {
   height:20px;
   padding:0px;
   background:#fff;
+  background:url(images/sprite.png) no-repeat;
   }
-
-  .boxes-box-controls .edit a { background:url(images/sprite.png) no-repeat; }
-  .boxes-box-controls .cancel a { background:url(images/sprite.png) -20px 0px no-repeat; }
