@@ -430,10 +430,18 @@ div.simpleshare-popup span.close {
     margin-left:-160px;
     }
 
+#palette .buttons {
+  text-align:center;
+  }
+
 #palette input.form-submit {
   color:#fff;
   background:#222;
   }
+
+  #palette input#edit-cancel {
+    display:none;
+    }
 
 /* Sitewide clock */
 #palette #block-mn_core-clock {
