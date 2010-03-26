@@ -797,7 +797,7 @@ div.utility-block input.form-submit {
 
 div.utility-block input.form-text { width:50%; }
 
-input#edit-search { width:120px; }
+input#edit-search { width:120px; max-width:120px; }
 
 /**
  * Views ==============================================================
