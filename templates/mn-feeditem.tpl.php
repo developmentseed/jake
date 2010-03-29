@@ -14,7 +14,10 @@ $other       = jake_views_render_field($fields);
 
   <div class='feeditem-meta clear-block'><?php print $date ?><?php print $feed ?></div>
   <h2 class='feeditem-title clear-block'><?php print $title ?></h2>
-  <div class='feeditem-content prose clear-block'><?php print $description ?></div>
+
+  <?php if ($description): ?>
+    <div class='feeditem-content prose clear-block'><?php print $description ?></div>
+  <?php endif; ?>
 
   <?php if ($other): ?>
     <div class='feeditem-other clear-block'><?php print $other ?></div>
