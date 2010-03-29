@@ -172,8 +172,24 @@ body#widget .feeditem-title {
   }
 
   body.views-mode-list .feeditem-title,
-  div.block .feeditem-title,
-  body#widget .feeditem-title { padding-top:10px; }
+  div.block .feeditem-title {
+    padding-top:10px;
+    padding-bottom:10px;
+    }
+
+    div.block .feeditem-title {
+      padding-bottom:30px;
+      }
+
+    body.views-mode-trash .feeditem-title {
+      padding-bottom:30px;
+      }
+
+  body#widget .feeditem-title {
+    padding-top:5px;
+    padding-bottom:25px;
+    font-size:12px;
+    }
 
   body.views-mode-list .feeditem-content,
   div.block .feeditem-content,
@@ -205,10 +221,6 @@ body#widget div.feeditem-meta {
   top:5px;
   left:5px;
   }
-
-  body#widget div.feeditem-meta .views-field-title-1 {
-    padding-left:45px;
-    }
 
 body#widget .feeditem-other,
 body#widget .feeditem-content,
