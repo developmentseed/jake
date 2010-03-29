@@ -30,6 +30,10 @@ div.item-list h3 {
   font-size:11px;
   }
 
+  body#widget div.item-list h3 {
+    padding-left:5px;
+    }
+
 div.item-list ul li {
   border-color:#ddd;
   padding:0px;
@@ -156,6 +160,11 @@ body#widget div.feeditem-meta {
   div.block div.feeditem-meta div.views-field-timestamp-1,
   body#widget div.feeditem-meta div.views-field-timestamp-1 { float:none; }
 
+  body#widget div.feeditem-meta {
+    top:5px;
+    left:5px;
+    }
+
 body.views-mode-list .feeditem-other,
 body.views-mode-list .feeditem-content,
 body.views-mode-list .feeditem-title,
@@ -186,8 +195,7 @@ body#widget .feeditem-title {
       }
 
   body#widget .feeditem-title {
-    padding-top:5px;
-    padding-bottom:25px;
+    padding:5px 0px 25px 60px;
     font-size:12px;
     }
 
@@ -207,32 +215,4 @@ body#widget .feeditem-title {
     height:auto;
     }
 
-/**
- * Widget specific.
- */
-
 body#widget div.view-filters { display:none; }
-
-body#widget div.item-list h3 {
-  padding-left:5px;
-  }
-
-body#widget div.feeditem-meta {
-  top:5px;
-  left:5px;
-  }
-
-body#widget .feeditem-other,
-body#widget .feeditem-content,
-body#widget .feeditem-title {
-  padding-left:50px;
-  }
-
-body#widget .feeditem-title {
-  padding-top:5px;
-  font-size:12px;
-  }
-
-body#widget .feeditem-content {
-  padding-bottom:5px;
-  }
