@@ -171,8 +171,12 @@ body.views-mode-list .feeditem-title {
     padding-bottom:10px;
     }
 
+    div.block .feeditem-meta {
+      padding:5px 10px 0px 10px;
+      }
+
     div.block .feeditem-title {
-      padding:5px 10px;
+      padding:0px 10px 5px 10px;
       overflow:hidden;
       white-space:nowrap;
       }
