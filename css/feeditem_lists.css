@@ -145,9 +145,7 @@ div.item-list ul li {
  * Condensed items.
  * For list view mode, dashboard listing blocks, and widgets.
  */
-body.views-mode-list div.feeditem-meta,
-div.block div.feeditem-meta,
-body#widget div.feeditem-meta {
+body.views-mode-list div.feeditem-meta {
   position:absolute;
   left:10px;
   top:10px;
@@ -156,24 +154,11 @@ body#widget div.feeditem-meta {
   background:transparent;
   }
 
-  body.views-mode-list div.feeditem-meta div.views-field-timestamp-1,
-  div.block div.feeditem-meta div.views-field-timestamp-1,
-  body#widget div.feeditem-meta div.views-field-timestamp-1 { float:none; }
-
-  body#widget div.feeditem-meta {
-    top:5px;
-    left:5px;
-    }
+  body.views-mode-list div.feeditem-meta div.views-field-timestamp-1 { float:none; }
 
 body.views-mode-list .feeditem-other,
 body.views-mode-list .feeditem-content,
-body.views-mode-list .feeditem-title,
-div.block .feeditem-other,
-div.block .feeditem-content,
-div.block .feeditem-title,
-body#widget .feeditem-other,
-body#widget .feeditem-content,
-body#widget .feeditem-title {
+body.views-mode-list .feeditem-title {
   padding-left:100px;
   height:20px;
   overflow:hidden;
@@ -187,17 +172,14 @@ body#widget .feeditem-title {
     }
 
     div.block .feeditem-title {
-      padding-bottom:30px;
+      padding:5px 10px;
+      overflow:hidden;
+      white-space:nowrap;
       }
 
     body.views-mode-trash .feeditem-title {
       padding-bottom:30px;
       }
-
-  body#widget .feeditem-title {
-    padding:5px 0px 25px 60px;
-    font-size:12px;
-    }
 
   body.views-mode-list .feeditem-content,
   div.block .feeditem-content,
@@ -215,4 +197,16 @@ body#widget .feeditem-title {
     height:auto;
     }
 
+/* Widget specific */
 body#widget div.view-filters { display:none; }
+
+body#widget .feeditem-meta {
+  padding:0px 5px;
+  }
+
+body#widget .feeditem-title {
+  padding:0px 5px;
+  font-size:12px;
+  overflow:hidden;
+  white-space:nowrap;
+  }
