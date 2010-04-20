@@ -12,6 +12,8 @@
 
 <?php if (!empty($admin)) print $admin ?>
 
+<?php if ($header): ?><div id="header" class='clear-block'><?php print $header; ?></div><?php endif; ?>
+
 <div id='branding' class='clear-block'>
   <?php if ($admin_link): ?><div class="admin-link"><?php print $admin_link; ?></div><?php endif; ?>
   <?php if ($site_name): ?><h1 class='site-name'><?php print $site_name ?></h1><?php endif; ?>

@@ -194,6 +194,38 @@ h1.site-name { float:left; }
     }
 
 /**
+ * Header =============================================================
+ */
+#header {
+  background:#666;
+  font-size:90%;
+  line-height:90%;
+  }
+
+#header .block-region {
+  color:#eee;
+  }
+
+#header a {
+  color:#eee;
+  }
+
+#header .block {
+  float:left;
+  }
+
+  #header .block .block-title {
+    background:transparent;
+    float:left;
+    padding: 5px 9px;
+    }
+
+#header .block ul.menu li {
+  border:none;
+  float:left;
+  }
+
+/**
  * Help, MN share =====================================================
  */
 div.help-link {

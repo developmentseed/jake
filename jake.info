@@ -20,6 +20,7 @@ regions[page_title] = "Page title"
 regions[left] = "Left sidebar"
 regions[right] = "Right sidebar"
 regions[content] = "Content"
+regions[header] = "Header"
 
 ; Theme features ======================================================
 
@@ -70,6 +71,7 @@ layouts[default][regions][] = "page_title"
 layouts[default][regions][] = "left"
 layouts[default][regions][] = "right"
 layouts[default][regions][] = "content"
+layouts[default][regions][] = "header"
 
 ; Layout: Single sidebar
 layouts[sidebar][name] = "Single sidebar"
@@ -81,6 +83,7 @@ layouts[sidebar][regions][] = "page_tools"
 layouts[sidebar][regions][] = "page_title"
 layouts[sidebar][regions][] = "left"
 layouts[sidebar][regions][] = "content"
+layouts[sidebar][regions][] = "header"
 
 ; Layout: Two column
 layouts[twocolumn][name] = "Two column"
@@ -92,3 +95,4 @@ layouts[twocolumn][regions][] = "page_tools"
 layouts[twocolumn][regions][] = "page_title"
 layouts[twocolumn][regions][] = "right"
 layouts[twocolumn][regions][] = "content"
+layouts[twocolumn][regions][] = "header"
