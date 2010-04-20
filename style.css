@@ -208,6 +208,7 @@ h1.site-name { float:left; }
 
 #header a {
   color:#eee;
+  font-weight:normal;
   }
 
 #header .block {
