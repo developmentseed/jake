@@ -512,6 +512,10 @@ div.simpleshare-popup span.close {
  */
 #page-header { z-index:1; }
 
+#page-title {
+  background:#e8e8e8 url(images/sprite.png) 0px -500px repeat-x;
+  }
+
 h2.page-title,
 div.views-exposed-form {
   background:#e8e8e8 url(images/sprite.png) 0px -500px repeat-x;
