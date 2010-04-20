@@ -58,7 +58,6 @@ function jake_preprocess_page(&$vars) {
   $context = context_get('context');
   if (isset($context['mn-dashboard'])) {
     $vars['title'] = '';
-    $vars['page_title'] = '';
   }
 
   // Truncate the slogan so it doesn't break the header
