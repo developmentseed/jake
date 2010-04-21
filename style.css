@@ -35,7 +35,7 @@ div.block div.block-content {
 .growl .messages,
 .sidebar .block,
 .page-content .node,
-.page-content .block,
+.page-content div.block,
 .page-content div.pager,
 .page-content div.view-empty,
 .page-content .view-content .item-list,
@@ -48,7 +48,7 @@ div.block div.block-content {
 .growl .messages,
 .sidebar .block,
 .page-content .node,
-.page-content .block,
+.page-content div.block,
 .page-content div.pager,
 .page-content div.view-empty,
 .page-content .view-content .item-list,
@@ -662,7 +662,7 @@ div.sidebar {
   font-size:11px;
   }
 
-div.page-content .block {
+div.page-content div.block {
   font-size:11px;
   }
 
@@ -767,8 +767,8 @@ div.navbar div.context-links a:hover { background:#fff; }
 div.sidebar { padding:10px 10px 10px 0px; }
 
 .page-content #content-wrapper > form,
-div.page-content .block,
-div.sidebar .block,
+div.page-content div.block,
+div.sidebar div.block,
 #palette .block-toggle {
   background:#f8f8f8;
   margin:0px 0px 10px;

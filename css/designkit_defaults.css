@@ -10,7 +10,7 @@ body { background-color:#d0dcdc; }
 .sidebar .block,
 .sidebar .block .view-content .item-list,
 .page-content .node,
-.page-content .block,
+.page-content div.block,
 .page-content div.pager,
 .page-content .view-content .item-list,
 .page-content .view-content table,
