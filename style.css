@@ -1216,3 +1216,15 @@ div.not-found {
   background:#fff;
   background:url(images/sprite.png) no-repeat;
   }
+
+/**
+ * Bookmarklet ========================================================
+ */
+#block-mn_core-bookmarklet div.bookmarklet {
+  text-align:center;
+  margin-top:5px;
+  }
+
+#left #block-mn_core-bookmarklet .block-content {
+  padding:10px 9px 9px 20px;
+  }
