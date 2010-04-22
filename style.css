@@ -96,6 +96,8 @@ body.views-mode-map #left {
   bottom:0px;
   }
 
+  body.views-mode-map.with-header #left { top:80px; }
+
   body.views-mode-map div.navbar {
     position:absolute;
     top:0px;
@@ -200,6 +202,7 @@ h1.site-name { float:left; }
   background:#666;
   font-size:85%;
   line-height:85%;
+  height:20px;
   }
 
 #header .block-region {

@@ -5,6 +5,8 @@ body.views-mode-map #branding {
   left:0px;
   }
 
+  body.views-mode-map.with-header #branding { top:20px; }
+
 body.views-mode-map #page-header {
   position:fixed;
   left:25%;
@@ -12,11 +14,17 @@ body.views-mode-map #page-header {
   right:0px;
   }
 
+  body.views-mode-map.with-header #page-header { top:80px; }
+
 body.views-mode-map #canvas { 
   position:fixed; 
   top:60px;
   left:25%;
   }
+
+  body.with-header #canvas {
+    top:80px;
+    }
 
 body.views-mode-map #main {
   position:fixed;
@@ -29,6 +37,7 @@ body.views-mode-map #main {
   /* Add cases when additional elements are stacked */
   body.views-mode-map.with-search #main { top:160px; }
   body.views-mode-map.with-tabs #main { top:140px; }
+  body.views-mode-map.with-header #main { top:120px; }
 
 div.openlayers-views-map,
 div.openlayers-views-map div.openlayers-map { position:relative; }

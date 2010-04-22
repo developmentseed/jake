@@ -43,6 +43,7 @@ function jake_preprocess_page(&$vars) {
 
   // Add body class for layout.
   $vars['attr']['class'] .= !empty($vars['template_files']) ? ' '. end($vars['template_files']) : '';
+  $vars['attr']['class'] .= !empty($vars['header']) ? ' with-header' : '';
 
   // Site name
   $vars['site_name'] = theme('site_name');
