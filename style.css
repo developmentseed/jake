@@ -28,7 +28,6 @@ div.block div.block-content {
   border:0px;
   margin:0px;
   padding:0px;
-  float:left;
   -moz-box-shadow:none;
   -webkit-box-shadow:none;
   }
@@ -208,6 +207,10 @@ h1.site-name { float:left; }
 
 #header .block-region {
   color:#eee;
+  }
+
+#header .block-content {
+  float:left;
   }
 
 #header a {
