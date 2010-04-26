@@ -28,6 +28,7 @@ div.block div.block-content {
   border:0px;
   margin:0px;
   padding:0px;
+  float:left;
   -moz-box-shadow:none;
   -webkit-box-shadow:none;
   }
