@@ -8,11 +8,9 @@ body { background-color:#d0dcdc; }
 
 .growl .messages,
 .sidebar .block,
-.sidebar .block .view-content .item-list,
 .page-content .node,
 .page-content div.block,
 .page-content div.pager,
-.page-content .view-content .item-list,
 .page-content .view-content table,
 .page-content > form {
   -moz-box-shadow:#9ca5a5 0px 0px 3px;

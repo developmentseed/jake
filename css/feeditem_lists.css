@@ -1,11 +1,6 @@
 /**
  * Feed item lists ====================================================
  */
-.page-content .view-content .item-list,
-.sidebar .view-content .item-list {
-  background:#fff;
-  margin-bottom:10px;
-  }
 
 .sidebar .openlayers-popupbox .item-list,
 #content-region-wrapper .openlayers-popupbox .item-list {
