@@ -55,6 +55,11 @@ function jake_preprocess_page(&$vars) {
     $vars['mission_block'] = theme('block', $mission_block);
   }
 
+  // Respect section title.
+  if (!empty($vars['section_title'])) {
+    $vars['title'] = $vars['section_title'];
+  }
+
   // Don't show title on dashboard == frontpage.
   $context = context_get('context');
   if (isset($context['mn-dashboard'])) {
