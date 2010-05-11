@@ -11,6 +11,14 @@ function jake_theme($existing, $type, $theme, $path) {
 }
 
 /**
+ * Move taxonomy back to first node edit page.
+ */
+function jake_preprocess_node_form(&$vars) {
+  $vars['form']['taxonomy'] = $vars['sidebar']['taxonomy'];
+  unset($vars['sidebar']['taxonomy']);
+}
+
+/**
  * Preprocessor for theme('help').
  */
 function jake_preprocess_help(&$vars) {
