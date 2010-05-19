@@ -42,7 +42,7 @@ designkit[image][printlogo][imagecache] = "imagecache_scale:720x120"
 ; Wallpaper
 designkit[image][wallpaper][title] = "Wallpaper"
 designkit[image][wallpaper][description] = "Wallpaper."
-designkit[image][wallpaper][imagecache] = "imagecache_scale:600x300"
+designkit[image][wallpaper][imagecache] = "imagecache_scale:800x600"
 
 ; Background
 designkit[color][background_color][title] = "Background"
