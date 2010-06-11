@@ -22,10 +22,12 @@ function jake_preprocess_node_form(&$vars) {
  * Preprocessor for theme('help').
  */
 function jake_preprocess_help(&$vars) {
-  $vars['title'] = t('Need help?');
-  $vars['layout'] = FALSE;
-  $vars['attr'] = array();
-  $vars['links'] = '';
+  if (!empty($vars['content'])) {
+    $vars['title'] = t('Need help?');
+    $vars['layout'] = FALSE;
+    $vars['attr'] = array();
+    $vars['links'] = '';
+  }
 }
 
 /**
