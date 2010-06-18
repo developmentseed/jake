@@ -27,6 +27,11 @@ regions[header] = "Header"
 features[] = "mission"
 features[] = "slogan"
 
+; Jake features =======================================================
+
+jake[flot] = "1"
+jake[openlayers] = "1"
+
 ; DesignKit ===========================================================
 
 ; Site logo

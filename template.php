@@ -1,6 +1,14 @@
 <?php
 
 /**
+ * Retrieve a jake info key.
+ */
+function jake_info($key) {
+  global $theme_info;
+  return isset($theme_info->info['jake'][$key]) ? $theme_info->info['jake'][$key] : FALSE;
+}
+
+/**
  * Implementation of hook_theme().
  */
 function jake_theme($existing, $type, $theme, $path) {
@@ -177,9 +185,11 @@ function jake_preprocess_node(&$vars) {
 
 /**
  * Preprocessor for theme('flot_views_style').
- * Supply DesignKit colors to OpenLayers styles.
  */
-function jake_preprocess_flot_views_style(&$vars) {
+function jake_preprocess_flot_views_style(&$vars, $force = FALSE) {
+  // Killswitch if subthemes declare styling should be skipped.
+  if (!jake_info('flot')) return;
+
   static $id = 0;
   $id++;
 
@@ -230,6 +240,9 @@ function jake_preprocess_flot_views_style(&$vars) {
  * Supply DesignKit colors to OpenLayers styles.
  */
 function jake_openlayers_styles($styles = array(), $map = array()) {
+  // Killswitch if subthemes declare styling should be skipped.
+  if (!jake_info('openlayers')) return;
+
   $color = variable_get('designkit_color', array());
   if (isset($styles['default'])) {
     $styles['default']['fillColor'] = !empty($color['foreground_color']) ? $color['foreground_color'] : '#ace';
