@@ -241,12 +241,12 @@ function jake_preprocess_flot_views_style(&$vars, $force = FALSE) {
  */
 function jake_openlayers_styles($styles = array(), $map = array()) {
   // Killswitch if subthemes declare styling should be skipped.
-  if (!jake_info('openlayers')) return;
-
-  $color = variable_get('designkit_color', array());
-  if (isset($styles['default'])) {
-    $styles['default']['fillColor'] = !empty($color['foreground_color']) ? $color['foreground_color'] : '#ace';
-    $styles['default']['strokeColor'] = !empty($color['foreground_color']) ? $color['foreground_color'] : '#ace';
+  if (jake_info('openlayers')) {
+    $color = variable_get('designkit_color', array());
+    if (isset($styles['default'])) {
+      $styles['default']['fillColor'] = !empty($color['foreground_color']) ? $color['foreground_color'] : '#ace';
+      $styles['default']['strokeColor'] = !empty($color['foreground_color']) ? $color['foreground_color'] : '#ace';
+    }
   }
   return $styles;
 }
