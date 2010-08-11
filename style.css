@@ -605,6 +605,7 @@ div.tabs ul.links a:hover {
   height:20px;
   background:#f8f8f8;
   padding:5px 100px;
+  overflow:hidden;
   }
 
 .feeditem-labels label {
@@ -629,7 +630,7 @@ div.data-taxonomy-tags a {
 
   div.data-taxonomy-tags ul.data-taxonomy-tags li a {
     padding:0px 5px;
-    margin-right:2px;
+    margin:0 0 2px 2px;
     }
 
 div.data-taxonomy-form .form-item { display:inline; }

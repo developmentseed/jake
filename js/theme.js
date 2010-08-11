@@ -109,6 +109,20 @@ Drupal.behaviors.jake = function (context) {
       return false;
     });
   });
+
+  $('#content div.feeditem div.feeditem-labels:not(.processed)').each(function() {
+    $(this).addClass('processed');
+    var originalHeight;
+    $(this).hover(
+      function() {
+        originalHeight = $(this).css('height');
+        $(this).css('height', 'auto');
+      },
+      function() {
+        $(this).css('height', originalHeight);
+      }
+    );
+  });
 };
 
 Drupal.jake = {}
