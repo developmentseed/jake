@@ -202,7 +202,10 @@ h1.site-name { float:left; }
   background:#666;
   font-size:85%;
   line-height:85%;
-  height:20px;
+  }
+
+body.context-editing #header {
+  height:40px;
   }
 
 #header .block-region {
