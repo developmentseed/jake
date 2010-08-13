@@ -1026,8 +1026,8 @@ table.views-view-grid div.views-field-item-count {
   width:auto;
   }
 
-#page-tools li.feed_1 a span,
-#page-tools li.feed_2 a span { background-position:-370px -150px; }
+#page-tools li.feed_1 a span { background-position:-370px -150px; }
+#page-tools li.feed_2 a span { background-position:-370px -420px; }
 
 #page-tools li.print a span { background-position:-370px -180px; }
 
