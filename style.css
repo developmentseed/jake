@@ -204,10 +204,6 @@ h1.site-name { float:left; }
   line-height:85%;
   }
 
-body.context-editing #header {
-  height:40px;
-  }
-
 #header .block-region {
   color:#eee;
   }

@@ -43,7 +43,11 @@ function jake_preprocess_page(&$vars) {
 
   // Add body class for layout.
   $vars['attr']['class'] .= !empty($vars['template_files']) ? ' '. end($vars['template_files']) : '';
-  $vars['attr']['class'] .= !empty($vars['header']) ? ' with-header' : '';
+
+  $header_blocks = block_list('header');
+  if (!empty($header_blocks)) {
+    $vars['attr']['class'] .= !empty($vars['header']) ? ' with-header' : '';
+  }
 
   // Site name
   $vars['site_name'] = theme('site_name');
@@ -106,7 +110,7 @@ function jake_preprocess_block(&$vars) {
  * Preprocessor for theme_context_block_editable_region().
  */
 function jake_preprocess_context_block_editable_region(&$vars) {
-  if (in_array($vars['region'], array('page_title', 'palette', 'page_tools'))) {
+  if (in_array($vars['region'], array('page_title', 'palette', 'page_tools', 'header'))) {
     $vars['editable'] = FALSE;
   }
 }
