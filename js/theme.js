@@ -110,19 +110,18 @@ Drupal.behaviors.jake = function (context) {
     });
   });
 
-  $('#content div.feeditem div.feeditem-labels:not(.processed)').each(function() {
-    $(this).addClass('processed');
-    var originalHeight;
-    $(this).hover(
-      function() {
-        originalHeight = $(this).css('height');
-        $(this).css('height', 'auto');
-      },
-      function() {
-        $(this).css('height', originalHeight);
-      }
-    );
-  });
+  $('#content div.feeditem div.feeditem-labels:not(.jake-processed)')
+    .addClass('jake-processed')
+    .each(function() {
+      $('.data-taxonomy-tags', this).hover(
+        function() {
+          $(this).css('height', 'auto');
+        },
+        function() {
+          $(this).css('height', null);
+        }
+      );
+    });
 };
 
 Drupal.jake = {}
