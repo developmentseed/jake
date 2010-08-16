@@ -56,6 +56,10 @@ designkit[color][foreground_color][default] = "#dd4422"
 designkit[color][header_color][title] = "Header"
 designkit[color][header_color][default] = "#333333"
 
+; Maps
+designkit[color][map_color][title] = "Maps"
+designkit[color][map_color][default] = "#b3b3b3"
+
 ; Context layouts =====================================================
 
 ; Layout: Default
