@@ -97,8 +97,8 @@ div.sidebar div.view-mn-search-saved div.views-field-title a,
 /**
  * Map color ==========================================================
  */
-body.views-mode-map div.openlayers-views-map,
-body.views-mode-map div.openlayers-views-map div.openlayers-map {
+div.openlayers-views-map,
+div.openlayers-views-map div.openlayers-map {
   background-color:<?php print $map_color ?>;
 }
 
