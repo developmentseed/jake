@@ -494,6 +494,16 @@ div.simpleshare-popup span.close {
 /**
  * Dashboard ==========================================================
  */
+body.context-editing div.draggable:hover a.context-block-handle {
+  right:auto;
+  left:-5px;
+  }
+
+body.context-editing div.draggable:hover a.context-block-remove {
+  right:auto;
+  left:35px;
+  }
+
 #palette form.context-editor div.buttons {
   display:block;
   background:transparent;
