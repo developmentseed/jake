@@ -74,3 +74,11 @@ div.sidebar div.view-mn-search-saved div.views-field-title a,
   border-color:#c63d1e;
   color:#fff;
   }
+
+/**
+ * Map color ==========================================================
+ */
+div.openlayers-views-map,
+div.openlayers-views-map div.openlayers-map {
+  background-color:#b3b3b3;
+}
