@@ -15,16 +15,15 @@ a {
 br,
 div.widget,
 div.block,
-div.feeditem-labels,
 div.feeditem-links,
 div.comment-links,
 div.node-links,
-ul.links,
 div.dsadmin,
 div.page-links,
 div.box,
 div.picture,
-form { display:none; }
+div.data-taxonomy-form,
+a.data-taxonomy-edit { display:none; }
 
 ul.inline,
 ul.inline li,
@@ -67,8 +66,7 @@ div.feeditem-meta {
   }
 
 h2.feeditem-title,
-div.feeditem-content,
-div.feeditem-labels {
+div.feeditem-content {
   float:right;
   clear:right;
   width:70%;
@@ -81,6 +79,22 @@ h2.feeditem-title {
   padding-bottom:15pt;
   border-bottom:1pt solid #ccc;
   margin-bottom:16pt;
+  }
+
+div.feeditem-labels {
+  font-size:8pt;
+  float:left;
+  width:25%;
+  }
+
+div.data-taxonomy-tags ul.data-taxonomy-tags li a {
+  padding:0px 5px;
+  margin:0 0 2px 2px;
+  background-color:#eee;
+  border-color:#f6d0c7;
+  color: #999;
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
   }
 
 /*
