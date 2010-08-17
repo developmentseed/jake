@@ -114,12 +114,12 @@ Drupal.behaviors.jake = function (context) {
   $('#content div.feeditem div.feeditem-labels:not(.jake-processed)')
     .addClass('jake-processed')
     .each(function() {
-      $('div.data-taxonomy-tags', this).hover(
+      $(this).hover(
         function() {
-          $(this).css('height', 'auto');
+          $('div.data-taxonomy-tags', this).css('height', 'auto');
         },
         function() {
-          $(this).css('height', null);
+          $('div.data-taxonomy-tags', this).css('height', null);
         }
       );
     });
