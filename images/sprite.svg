@@ -16,7 +16,7 @@
    sodipodi:version="0.32"
    inkscape:version="0.47 r22583"
    version="1.0"
-   inkscape:export-filename="/Users/robertsoden/www/mn/profiles/managingnews/themes/jake/images/sprite.png"
+   inkscape:export-filename="/Users/diggersf/www/mn/profiles/managingnews/themes/jake/images/sprite.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90"
    sodipodi:docname="sprite.svg"
@@ -302,13 +302,13 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1"
-     inkscape:cx="326.46904"
+     inkscape:cx="350.57239"
      inkscape:cy="300.29175"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="852"
-     inkscape:window-height="724"
+     inkscape:window-width="1440"
+     inkscape:window-height="852"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0">
@@ -328,7 +328,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -979,14 +979,5 @@
        id="path20452"
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0" />
-    <rect
-       rx="3"
-       ry="3"
-       y="147.32675"
-       x="749.13263"
-       height="20"
-       width="20"
-       id="rect7971"
-       style="opacity:0.98999999;fill:#f4f4f4;fill-opacity:1;stroke:none;display:inline" />
   </g>
 </svg>
