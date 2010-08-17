@@ -114,7 +114,7 @@ Drupal.behaviors.jake = function (context) {
   $('#content div.feeditem div.feeditem-labels:not(.jake-processed)')
     .addClass('jake-processed')
     .each(function() {
-      $('.data-taxonomy-tags', this).hover(
+      $('div.data-taxonomy-tags', this).hover(
         function() {
           $(this).css('height', 'auto');
         },

@@ -612,7 +612,7 @@ div.tabs ul.links a:hover {
   padding:5px 100px 0;
   }
 
-.feeditem-labels .data-taxonomy-tags {
+.feeditem-labels div.data-taxonomy-tags {
   min-height:25px;
   height:25px;
   overflow:hidden;
