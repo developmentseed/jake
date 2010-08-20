@@ -43,6 +43,7 @@ div.openlayers-views-map,
 div.openlayers-views-map div.openlayers-map { position:relative; }
 
 body.views-mode-map div.openlayers-views-map,
+body.views-mode-map div.openlayers-views-map div.openlayers-container,
 body.views-mode-map div.openlayers-views-map div.openlayers-map {
   position:absolute;
   top:0px;
@@ -50,8 +51,8 @@ body.views-mode-map div.openlayers-views-map div.openlayers-map {
   left:0px;
   bottom:0px;
   
-  width:auto !important;
-  height:auto !important;
+  width:auto;
+  height:auto;
   }
 
 div.openlayers-map circle { cursor:pointer; }
