@@ -295,7 +295,7 @@ div.simpleshare-popup {
 
     #help div.help-close a:hover { background:#eee; color:#222; }
 
-#help h2.help-title {
+#help div.help-title {
   padding:20px 20px 0px;
   font-size:24px;
   font-weight:bold;
@@ -559,7 +559,7 @@ h2.page-title {
     white-space:nowrap;
     }
 
-div.navbar h2.block-title {
+div.navbar div.block-title {
   font-size:18px;
   font-weight:bold;
   letter-spacing:-1px;
@@ -800,8 +800,8 @@ div.sidebar div.block,
   div.sidebar .block .block-content,
   div.page-content .block .block-content { padding:10px; }
 
-div.sidebar h2.block-title,
-div.page-content h2.block-title {
+div.sidebar div.block-title,
+div.page-content div.block-title {
   -moz-border-radius:5px 5px 0px 0px;
   -webkit-border-top-left-radius:5px;
   -webkit-border-top-right-radius:5px;
@@ -821,7 +821,7 @@ div.page-content h2.block-title {
   border-bottom-color:#bcd;
   }
 
-#canvas div.utility-block h2.block-title {
+#canvas div.utility-block div.block-title {
   background:#ace;
   color:#fff;
   }
@@ -863,6 +863,8 @@ div.utility-block input.form-submit {
 div.utility-block input.form-text { width:50%; }
 
 input#edit-search { width:120px; max-width:120px; }
+
+ul.data-taxonomy-tags { margin: 0px;}
 
 /**
  * Views ==============================================================
