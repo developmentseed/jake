@@ -1,13 +1,12 @@
 <?php include 'page.header.inc'; ?>
 
-<?php if ($left): ?>
-  <div id='left'><div class='navbar clear-block'>
-    <?php if (!empty($context_links)): ?>
-      <div class='context-links clear-block'><?php print $context_links ?></div>
-    <?php endif; ?>
-    <?php print $left ?>
-  </div></div>
-<?php endif; ?>
+
+<div id='left'><div class='navbar clear-block'>
+  <?php if (!empty($context_links)): ?>
+    <div class='context-links clear-block'><?php print $context_links ?></div>
+  <?php endif; ?>
+  <?php print $left ?>
+</div></div>
 
 <div id='canvas' class='clear-block'>
 
