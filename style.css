@@ -376,6 +376,16 @@ div.simpleshare-popup span.close {
   }
 
 /**
+ * Progress bar =======================================================
+ */
+.progress .bar {
+  border:1px solid #666;
+  }
+.progress .filled {
+  background:none repeat scroll 0 0 #666;
+  }
+
+/**
  * Footer =============================================================
  */
 #footer {
