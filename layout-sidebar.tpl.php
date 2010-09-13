@@ -11,6 +11,10 @@
 
   <?php include 'page.title.inc'; ?>
 
+  <?php if ($show_messages && $messages): ?>
+    <div class='growl'><?php print $messages; ?></div>
+  <?php endif; ?>
+
   <div id='main'>
     <div id='content' class='page-content clear-block'>
       <div id='content-wrapper'><?php print $content ?></div>
