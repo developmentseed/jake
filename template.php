@@ -53,6 +53,7 @@ function jake_preprocess_page(&$vars) {
   $vars['site_name'] = theme('site_name');
 
   // Display mission in a block
+  $vars['mission_block'] = '';
   if (!empty($vars['mission']) && drupal_is_front_page()) {
     $mission_block = new stdClass();
     $mission_block->content = $vars['mission'];

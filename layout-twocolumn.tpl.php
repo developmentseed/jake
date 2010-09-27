@@ -26,9 +26,7 @@
 
   <?php if ($right): ?>
     <div id='right'><div class='sidebar clear-block'>
-      <?php if ($mission_block): ?>
-        <?php print $mission_block ?>
-      <?php endif; ?>
+      <?php print $mission_block ?>
       <?php print $right ?>
     </div></div>
   <?php endif; ?>
