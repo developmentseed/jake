@@ -12,12 +12,14 @@ Drupal.behaviors.jake = function (context) {
     });
   });
 
+  // IE7 specific map hack
   if(jQuery.browser.msie && jQuery.browser.version < 8.0) {
     $('body.views-mode-map div.openlayers-views-map div.openlayers-map').height($('body.views-mode-map div.openlayers-views-map div.openlayers-container').height());
     $('body.views-mode-map div.openlayers-views-map div.openlayers-container').resize(function() {
       $('body.views-mode-map div.openlayers-views-map div.openlayers-map').height($('body.views-mode-map div.openlayers-views-map div.openlayers-container').height());
     });
   }
+
   /**
    * Growl-like messages.
    */
