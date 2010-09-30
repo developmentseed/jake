@@ -62,9 +62,12 @@ Drupal.behaviors.jake = function (context) {
   });
 
   // Hide the context ui category selector if there is only one option
-  if ($('#spaces-dashboard-editor select.context-block-browser-categories option').size() == 1) {
-    $('#spaces-dashboard-editor div.categories').hide();
-  }
+  $('#block-spaces_dashboard-editor .block-title').click(function() {
+    if ($('#spaces-dashboard-editor select.context-block-browser-categories option').size() == 1) {
+      $('#spaces-dashboard-editor select.context-block-browser-categories').val('boxes').change();
+      $('#spaces-dashboard-editor div.categories').hide();
+    }
+  });
 
   // Activate spaces dashboard editor when a box is edited
   $('.boxes-box-controls .links li.edit').children('a:not(.jake-processed)').each(function() {
