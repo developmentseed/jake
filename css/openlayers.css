@@ -184,3 +184,40 @@ div.openlayers-map div.olControlAttribution {
 body.views-mode-map div#openlayers-map-auto-id-0_OpenLayers_ViewPort {
   position:absolute !important;
   }
+
+/**
+ * Layer Switcher
+ */
+.openlayers-map .olControlLayerSwitcher {
+  background:url(../images/black90.png);
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  margin-top: 3px;
+  margin-left: 3px;
+  margin-bottom: 3px;
+  font-size: 100%;
+  font-weight:normal;
+  color: #eee;
+  }
+
+.openlayers-map .olControlLayerSwitcher .layersDiv,
+.openlayers-map .olControlLayerSwitcher span {
+  background:transparent !important;
+  opacity:1.0 !important;
+  }
+
+.openlayers-map .olControlLayerSwitcher .layersDiv {
+  padding: 5px 75px 5px 10px;
+  }
+
+.openlayers-map .olControlLayerSwitcher .baseLbl,
+.openlayers-map .olControlLayerSwitcher .dataLbl {
+  font-weight: bold;
+  margin-bottom: 5px;
+  padding: 5px 0px 4px;
+  border-bottom: 1px solid #666;
+  }
+
+.openlayers-map .olControlLayerSwitcher input {
+  vertical-align: middle;
+  margin-right: 5px;
+  }
