@@ -13,7 +13,11 @@ body.layout-twocolumn #canvas {
   width:100%;
   }
 
-  body.layout-twocolumn #main,
+  body.layout-twocolumn #main {
+    width:50%;
+    clear:left;
+  }
   body.layout-twocolumn #right {
     width:50%;
+    clear:right;
     }
