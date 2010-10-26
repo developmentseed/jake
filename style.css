@@ -876,6 +876,8 @@ input#edit-search { width:120px; max-width:120px; }
 
 ul.data-taxonomy-tags { margin: 0px;}
 
+form input#edit-delete-1 { color:#ccc; }
+
 /**
  * Views ==============================================================
  */
