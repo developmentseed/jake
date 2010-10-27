@@ -5,7 +5,7 @@ $feed        = jake_views_render_field($fields['title_1']);
 $author      = jake_views_render_field($fields['author']);
 $description = jake_views_render_field($fields['description']);
 $labels      = jake_views_render_field($fields['data_taxonomy_form']);
-$links       = jake_views_render_field($fields['simpleshare_link']);
+$links       = jake_views_render_field($fields['simpleshare_link']) . jake_views_render_field($fields['mark_trash']);
 
 // All other fields.
 $other       = jake_views_render_field($fields);
