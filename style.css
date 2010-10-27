@@ -660,10 +660,15 @@ div.data-taxonomy-form input.form-text {
   border-width:0px;
   }
 
+.data-taxonomy-editing .data-taxonomy-form {
+  margin-bottom:5px;
+  }
+
 div.data-taxonomy-form input.form-submit,
 div.data-taxonomy-tags a.data-taxonomy-edit {
   position:absolute;
   right:5px;
+  top:5px;
   }
 
   div.data-taxonomy-tags a.data-taxonomy-edit {
