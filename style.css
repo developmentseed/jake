@@ -1101,9 +1101,12 @@ div.pager li.pager-current {
 
   div.pager .pager-list li.pager-current:first-child,
   div.pager .pager-list li:first-child a {
-    -moz-border-radius:5px 5px 0px 0px;
-    -webkit-border-top-left-radius:5px;
-    -webkit-border-bottom-left-radius:5px;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
     }
 
 div.pager ul.pager-links a {
