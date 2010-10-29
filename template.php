@@ -190,10 +190,10 @@ function jake_preprocess_flot_views_style(&$vars) {
       if (Drupal.settings.flot_labels[item.datapoint[0]]) {
         var date = Drupal.settings.flot_labels[item.datapoint[0]];
         if (item.datapoint[1] == 1) {
-          var text = '<strong>' + item.datapoint[1] + ' story</strong> ' + date;
+          var text = '<strong>' + item.datapoint[1] + ' " . t('story') . "</strong> ' + date;
         }
         else {
-          var text = '<strong>' + item.datapoint[1] + ' stories</strong> ' + date;
+          var text = '<strong>' + item.datapoint[1] + ' " . t('stories') . "</strong> ' + date;
         }
         $('#{$id_string}').siblings('div.flot-caption').html(text);
       }
